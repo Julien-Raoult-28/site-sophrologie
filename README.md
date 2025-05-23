@@ -1,5 +1,5 @@
 # site-sophrologie
 
 git add .
-git commit -m "Message décrivant tes changements"
+git commit -m "Ajout de la page d'accueil"
 git push

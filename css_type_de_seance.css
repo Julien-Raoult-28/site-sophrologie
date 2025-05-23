@@ -1,0 +1,119 @@
+/* Style de base pour le site du sophrologue */
+:root {
+  --sable: #e8ddc7;
+  --rose-clair: #fae6e5;
+  --rose-foncé: #bf717e;
+  --gris-police: #6d6b6d;
+  --fond-de-page: #e4ebee;
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Indie Flower', sans-serif;
+    background-color: var(--fond-de-page);
+    color: #333;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Responsive */
+@media (max-width: 1000px) {
+    main {
+        max-width: 100%;
+    }
+    .types_de_seances-row {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .types_de_seances {
+        max-width: 100%;
+        min-height: 200px;
+    }
+}
+
+@media (max-width: 600px) {
+    main {
+        padding: 20px 10px;
+    }
+    .main-nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .main-nav a {
+        margin: 5px 0;
+    }
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin: auto;
+}
+form label {
+    margin-top: 10px;
+    font-weight: bold;
+}
+form input,
+form textarea {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+form button {
+    margin-top: 20px;
+    padding: 12px;
+    background-color: #1d3557;
+    color: rgb(39, 38, 38);
+    border: none;
+    border-radius: 8px;
+    font-size: 1em;
+    cursor: pointer;
+}
+form button:hover {
+    background-color: #457b9d;
+}
+/* Responsive */
+/*////////////////////////////////////////////////////////////////////////////////////////////*/
+.types_de_seances-row {
+    display: flex;
+    gap: 30px;
+    justify-content: stretch;
+    align-items: stretch;
+    width: 100%;
+}
+
+.types_de_seances {
+    background: var(--rose-clair);
+    border-left: 6px solid var(--rose-foncé);
+    margin: 0;
+    padding: 20px 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px #457b9d0d;
+    flex: 1 1 0;
+    min-width: 0;
+    min-height: 300px;
+    max-width: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+.types_de_seances h2 {
+    margin-top: 0;
+    color: var(--rose-foncé) ;
+}
+@media (max-width: 1000px) { /* responsive pour écrans < 1000px */
+  .types_de_seances-row { /* ligne des types de séances */
+    flex-direction: column; /* Colonne en responsive */
+    gap: 20px; /* Espace entre éléments */
+  }
+  .types_de_seances { /* bloc individuel de séance */
+    max-width: 100%; /* Largeur max 100% */
+    min-height: 200px; /* Hauteur min 200px */
+  }
+}
