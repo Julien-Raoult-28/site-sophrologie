@@ -1,0 +1,108 @@
+/* Style de base pour le site du sophrologue */
+.accueil_presentation {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  justify-content: center;
+}
+.photo-rond {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 2px 8px #457b9d33;
+}
+.accueil_presentation_texte-carre {
+  background: var(--rose-foncé);
+  color:#fff;
+  font-family:Arial;
+  border-radius: 16px;
+  padding: 30px 40px;
+  min-width: 250px;
+  min-height: 180px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.accueil_presentation_signature {
+  display: block;
+  font-family: 'Great Vibes', cursive;
+  font-size: 1.5em;
+  color: var(--fond-de-page); /* ou une autre couleur de ton choix */
+  text-align: right;
+  margin-top: 30px;
+}
+.accueil_2_fond {
+  width: 100vw;
+  height: 900px;
+  background: var(--sable);
+  margin: 5px 0 0 0;
+  left: 50%;
+  right: 50%;
+  position: relative;
+  transform: translateX(-50vw);
+  padding: 10px 0;
+}
+.accueil_2_images {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0px;
+  height: 60%;
+  margin-top: 120px;
+}
+.accueil_2_item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.accueil_2_item img {
+  width: 80%; /* Ajuste la taille selon tes besoins */
+  height: 50%;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 10px;
+}
+.accueil_2_carre_texte {
+  width: 360px; /* Ajuste la taille */
+  height: 400px;
+  background: var(--rose-foncé); /* Couleur de fond modifiable */
+  border-radius: 16px;
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--fond-de-page); /* Couleur du texte */
+  font-size: 1em;
+  box-shadow: 0 2px 8px #457b9d0d;
+  text-align: center;
+  justify-content: flex-start;
+  padding: 10px;
+}
+
+
+
+@media (max-width: 800px) {
+  .accueil_presentation {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+  .accueil_2_images {
+    flex-direction: column;
+    gap: 40px;
+    margin-top: 30px;
+  }
+  .accueil_2_carre_texte {
+    width: 90vw;
+    height: auto;
+    min-width: unset;
+    min-height: unset;
+    padding: 20px 10px;
+  }
+  .accueil_2_fond {
+    height: auto;
+    padding-bottom: 40px;
+  }
+}

@@ -1,0 +1,225 @@
+:root { /* variables de couleurs principales */
+  --sable: #dfc7af; /* Couleur sable */
+  --rose-clair: #d6d4c8; /* Couleur rose clair */
+  --rose-foncé: #c58a72; /* Couleur rose foncé */
+  --gris-police: #6d6b6d; /* Couleur gris pour la police */
+  --fond-de-page: #f2ebe1; /* Couleur de fond de page */
+}
+
+*, *::before, *::after { /* Ajout : évite les débordements liés au box-sizing */
+  box-sizing: border-box;
+}
+
+html, body { /* Ajout : limite la largeur et évite le scroll horizontal */
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+body { /* style général du corps de la page */
+    margin: 0; /* Supprime la marge par défaut */
+    padding: 0; /* Supprime le padding par défaut */
+    font-family: 'Indie Flower', sans-serif; /* Police principale */
+    background-color: var(--fond-de-page); /* Couleur de fond */
+    color: #333; /* Couleur du texte */
+    line-height: 1.6; /* Hauteur de ligne */
+}
+
+form { /* formulaire de contact ou autre */
+    display: flex; /* Flexbox */
+    flex-direction: column; /* Colonne */
+    max-width: 500px; /* Largeur max */
+    margin: auto; /* Centré */
+}
+form label { /* label du formulaire */
+    margin-top: 10px; /* Espace au-dessus */
+    font-weight: bold; /* Gras */
+}
+form input,
+form textarea { /* champs de saisie et zones de texte */
+    padding: 10px; /* Padding */
+    margin-top: 5px; /* Espace au-dessus */
+    border: 1px solid #ccc; /* Bordure grise */
+    border-radius: 5px; /* Arrondi */
+    font-size: 1em; /* Taille standard */
+}
+form button { /* bouton du formulaire */
+    margin-top: 20px; /* Espace au-dessus */
+    padding: 12px; /* Padding */
+    background-color: #1d3557; /* Fond bouton */
+    color: rgb(39, 38, 38); /* Couleur texte */
+    border: none; /* Pas de bordure */
+    border-radius: 8px; /* Arrondi */
+    font-size: 1em; /* Taille standard */
+    cursor: pointer; /* Curseur */
+}
+form button:hover { /* bouton du formulaire au survol */
+    background-color: #457b9d; /* Fond au survol */
+}
+
+.header-image { /* image d'en-tête */
+    position: relative; /* Relative */
+    background-image: url('img_En_tete.png'); /* Image de fond */
+    background-size: 100% 100%; /* Couvre toute la zone */
+    background-repeat: no-repeat; /* Pas de répétition */
+    background-position: center; /* Centré */
+    height: 220px; /* Hauteur */
+    display: flex; /* Flexbox */
+    align-items: center; /* Centrage vertical */
+}
+.logo { /* logo du site */
+    display: block; /* Bloc */
+    margin: 20px auto 0 auto; /* Centré, marge haut */
+    width: 300px; /* Largeur */
+    height: auto; /* Hauteur auto */
+    z-index: 2; /* Au-dessus */
+}
+
+.gold-bar { /* barre dorée décorative */
+  height: 4px; /* Hauteur barre dorée */
+  background: linear-gradient(90deg, #8d6e28 0%, #c9b037 20%, #b38600 40%, #ffd700 60%, #b38600 80%, #8d6e28 100%); /* Dégradé doré */
+  width: 100%; /* Largeur totale */
+  margin: 0 auto; /* Centré */
+}
+
+.main-nav { /* barre de navigation principale */
+  display: flex; /* Navigation horizontale */
+  align-items: center; /* Centrage vertical */
+  justify-content: space-between; /* Espace entre éléments */
+  background: var(--sable); /* Fond sable */
+  padding: 5px 5px; /* Padding */
+  position: sticky; /* Collant en haut */
+  top: 0; /* En haut */
+  z-index: 1000; /* Au-dessus */
+}
+
+.main-nav a { /* liens de navigation */
+    color: var(--rose-foncé); /* Couleur liens */
+    text-decoration: none; /* Pas de soulignement */
+    margin: 0 5px; /* Espace horizontal */
+    font-weight: bold; /* Gras */
+    transition: border-bottom 0.2s; /* Animation bordure */
+}
+
+.main-nav a:hover { /* liens de navigation au survol */
+    background-color: var(--rose-clair); /*couleur de fond au survol*/
+    padding:10px; /* marge autour du texte de navigation pour la couleur de fond*/
+    border-radius: 16px; /*arrondir les bordures de la couleur de fond au survol*/
+}
+
+.main-nav a.active { /* lien de navigation actif */
+  background-color: var(--fond-de-page); /*couleur de fond au survol*/
+  padding:10px; /* marge autour du texte de navigation pour la couleur de fond*/
+  border-radius: 16px; /*arrondir les bordures de la couleur de fond au survol*/
+}
+.main-nav i { /* icône de navigation dans la barre principale */
+  margin-right: 6px; /* Espace à droite */
+  color: var(--rose-foncé); /* Couleur icône */
+}
+
+main { /* contenu principal */
+    padding: 40px 20px; /* Padding autour du contenu */
+    max-width: 1200px; /* Largeur max */
+    margin: auto; /* Centré */
+}
+
+.reseau-icon { /* icônes des réseaux sociaux */
+  width: 28px; /* Largeur icônes réseaux */
+  height: 28px; /* Hauteur icônes réseaux */
+  margin: 0 8px; /* Espace horizontal */
+  vertical-align: middle; /* Alignement vertical */
+  transition: transform 0.2s; /* Animation agrandissement */
+}
+
+.reseau-icon:hover { /* icônes réseaux sociaux au survol */
+  transform: scale(1.15); /* Agrandit au survol */
+}
+
+.nav-icons { /* conteneur des icônes réseaux sociaux */
+  display: flex; /* Flexbox */
+  align-items: center; /* Centrage vertical */
+  gap: 4px; /* Espace entre icônes */
+}
+
+.nav-links { /* conteneur des liens de navigation */
+  display: flex; /* Flexbox */
+  align-items: center; /* Centrage vertical */
+  gap: 4px; /* Espace entre liens */
+}
+
+footer { /* pied de page */
+    background-color: var(--gris-police); /* Fond pied de page */
+    color: #fff; /* Texte blanc */
+    text-align: center; /* Centré */
+    padding: 10px; /* Padding */
+    width: 100%; /* Largeur totale */
+}
+
+.picto-barre { /* petite icône barre */
+  width: 20px; /* Largeur icône barre */
+  height: 20px; /* Hauteur icône barre */
+  vertical-align: middle; /* Aligné au milieu */
+  margin-right: 6px; /* Espace à droite */
+}
+.picto-avis_google { /* icône avis Google */
+  width: 80px; /* Largeur icône avis Google */
+  height: 50px; /* Hauteur icône avis Google */
+  vertical-align: middle; /* Aligné au milieu */
+  margin-right: 6px; /* Espace à droite */
+}
+.burger { /* bouton menu burger */
+  display: none; /* Cache le burger par défaut */
+  font-size: 2em; /* Taille du burger */
+  background: none; /* Pas de fond */
+  border: none; /* Pas de bordure */
+  color: var(--rose-foncé); /* Couleur burger */
+  cursor: pointer; /* Curseur pointeur */
+}
+js-header-et-nav {
+  display: contents; /* Permet aux enfants d'être rendus comme s'ils étaient au même niveau que le composant */
+}
+
+
+
+@media (max-width: 1000px) { /* responsive pour écrans < 1000px */
+  main { /* conteneur principal */
+    max-width: 100%; /* Largeur max 100% */
+  }
+}
+
+@media (max-width: 800px) { /* responsive pour écrans < 800px (rappel) */
+  .burger { /* bouton menu burger */
+    display: block; /* Affiche le burger */
+    position: absolute; /* Absolu */
+    top: 25px; /* Décalage haut */
+    right: 25px; /* Décalage droite */
+    z-index: 2000; /* Au-dessus */
+  }
+  .main-nav .nav-links { /* liens de navigation dans le menu */
+    display: none; /* Cache les liens */
+    flex-direction: column; /* Colonne */
+    background: var(--sable); /* Fond sable */
+    position: absolute; /* Absolu */
+    top: 60px; /* Décalage haut */
+    left: 0; /* Aligné à gauche */
+    width: 100vw; /* Largeur totale */
+    padding: 20px 0; /* Padding vertical */
+    box-shadow: 0 2px 8px #0002; /* Ombre */
+  }
+  .main-nav.open .nav-links { /* liens visibles quand menu ouvert */
+    display: flex; /* Affiche les liens */
+  }
+}
+
+@media (max-width: 600px) { /* responsive pour écrans < 600px */
+  main { /* conteneur principal */
+    padding: 20px 10px; /* Padding réduit */
+  }
+  .main-nav { /* barre de navigation principale */
+    display: flex; /* Flexbox */
+    flex-direction: column; /* Colonne */
+    align-items: center; /* Centrage */
+  }
+  .main-nav a { /* liens de navigation */
+    margin: 5px 0; /* Espace vertical */
+  }
+}
