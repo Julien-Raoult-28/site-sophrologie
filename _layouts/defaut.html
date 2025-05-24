@@ -5,13 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     < title >{{ page.title }}</title>
     <link rel="stylesheet" href="/css_en_tete.css">
+    {% if page.url == "/index.html" or page.url == "/" %}
+    <link rel="stylesheet" href="/css_accueil.css">
+  {% endif %}
+    {% if page.url == "/page_avis_google.html" or page.url == "/" %}
+    <link rel="stylesheet" href="/css_avis_google.css">
+  {% endif %}
+    {% if page.url == "/page_carroussel.html" or page.url == "/" %}
+    <link rel="stylesheet" href="/css_carroussel.css">
+  {% endif %}
+    {% if page.url == "/page_professionnel.html" or page.url == "/" %}
+    <link rel="stylesheet" href="/css_professionnel.css">
+  {% endif %}
+    {% if page.url == "/page_rdv.html" or page.url == "/" %}
+    <link rel="stylesheet" href="/css_rdv.css">
+  {% endif %}
+    {% if page.url == "/page_sophrologie.html" or page.url == "/" %}
+    <link rel="stylesheet" href="/css_sophrologie.css">
+  {% endif %}
+    {% if page.url == "/page_types_de_seances.html" or page.url == "/" %}
+    <link rel="stylesheet" href="/css_type_de_seance.css">
+  {% endif %}
   </head>
-  < body >
-    {% include header.html %}
-    {% include nav.html %}
-    < main >
-      {{ content }}
-    </main>
-    {% include footer.html %}
-  </body>
-</html>
+< body >
+  {% include header.html %}
+  {% include nav.html %}
+  < main >
+    {{ content }}
+  </main>
+  {% include footer.html %}
+</body>

@@ -1,15 +1,15 @@
 <nav class="main-nav">
   <button class="burger" aria-label="Ouvrir le menu">☰</button>
   <div class="nav-links">
-    <a href="/index.html">Accueil</a>
-    <a href="/page_sophrologie.html">La sophrologie ?</a>
-    <a href="/page_carroussel.html">Carroussel</a>
-    <a href="/page_types_de_seances.html">Séances</a>
-    <a href="/page_professionnel.html">Professionnel</a>
-    <a href="/page_rdv.html">Rendez-vous</a>
+    <a href="/index.html" {% if page.url == "/index.html" %}class="active"{% endif %}>Accueil</a>
+    <a href="/page_sophrologie.html" {% if page.url == "/page_sophrologie.html" %}class="active"{% endif %}>La sophrologie ?</a>
+    <a href="/page_carroussel.html" {% if page.url == "/index.html" %}class="active"{% endif %}>Carroussel</a>
+    <a href="/page_types_de_seances.html" {% if page.url == "/index.html" %}class="active"{% endif %}>Séances</a>
+    <a href="/page_professionnel.html" {% if page.url == "/index.html" %}class="active"{% endif %}>Professionnel</a>
+    <a href="/page_rdv.html" {% if page.url == "/index.html" %}class="active"{% endif %}>Rendez-vous</a>
   </div>
   <div class="nav-icons">
-    <a href="/page_avis_google.html"><img src="/img_picto_avis_google.png" alt="avis_google" class="picto-avis_google"></a>
+    <a href="/page_avis_google.html" {% if page.url == "/index.html" %}class="active"{% endif %}><img src="/img_picto_avis_google.png" alt="avis_google" class="picto-avis_google"></a>
     <a href="https://www.linkedin.com/in/julien-raoult-a119a7129/" target="_blank"><img src="/img_picto_linkedin.png" alt="LinkedIn" class="reseau-icon"></a>
     <a href="https://www.facebook.com/julien.raoult.9" target="_blank"><img src="/img_picto_facebook.png" alt="Facebook" class="reseau-icon"></a>
   </div>
