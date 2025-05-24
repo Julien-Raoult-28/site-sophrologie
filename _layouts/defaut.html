@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="fr">
-  < head >
+  <head >
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    < title >{{ page.title }}</title>
+    <title >{{ page.title }}</title>
     <link rel="stylesheet" href="/css_en_tete.css">
     {% if page.url == "/index.html" or page.url == "/" %}
     <link rel="stylesheet" href="/css_accueil.css">
@@ -27,10 +27,10 @@
     <link rel="stylesheet" href="/css_type_de_seance.css">
   {% endif %}
   </head>
-< body >
+<body >
   {% include header.html %}
   {% include nav.html %}
-  < main >
+  <main >
     {{ content }}
   </main>
   {% include footer.html %}
