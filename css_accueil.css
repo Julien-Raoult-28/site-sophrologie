@@ -1,41 +1,91 @@
-/* Style de base pour le site du sophrologue */
+:root {
+  --fond_clair: #f9f5f0;
+  --beige_clair: #ead7c4;
+  --beige_foncé: #a67c52;
+  --police_grise: #6d6d6d;
+  --vert: #d6d4c8;
+}
 .accueil_presentation {
   display: flex;
   align-items: center;
   gap: 40px;
   justify-content: center;
 }
-.photo-rond {
-  width: 220px;
-  height: 220px;
+/*.photo-rond {
+  width: 400px;
+  height: 400px;
   object-fit: cover;
+  object-position: 30% 30%; 
   border-radius: 50%;
-  box-shadow: 0 2px 8px #457b9d33;
+  box-shadow: 0 2px 8px var(--beige_foncé);
+  margin-left: 20px;
+}*/
+.photo_accueil_1{
+  /*width: 400px;
+  height: 400px;
+  object-fit: cover;*/
+  margin-left: 20px;
+  margin-top: 20px;
+  height: 600px;
 }
+
 .accueil_presentation_texte-carre {
-  background: var(--rose-foncé);
-  color:#fff;
-  font-family:Arial;
+  background: var(--beige_clair);
   border-radius: 16px;
   padding: 30px 40px;
-  min-width: 250px;
+  min-width: 230px;
   min-height: 180px;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin-top: 20px;
+  margin-right: 20px;
+}
+@font-face {
+  font-family: 'Flatlion';
+  src: url('Flatlion2.ttf') format('truetype');
+  /*font-weight: normal;
+  font-style: normal;*/
+}
+@font-face {
+  font-family: 'PlayfairDisplay-Italic';
+  src: url('PlayfairDisplay-Italic.ttf') format('truetype');
+  /*font-weight: normal;
+  font-style: normal;*/
+}
+.texte1 {
+  font-size: 6em;
+  color: var(--police_grise);
+  margin-bottom: 10px;
+  font-family: 'Flatlion';
+}
+.texte2 {
+  font-size: 1.2em;
+  font-style: italic;
+  color: var(--beige_foncé);
+  margin-bottom: 16px;
+  font-family: 'PlayfairDisplay-Italic' , sans-serif;
+  font-weight: bold;
+}
+.texte3 p {
+  font-size: 1em;
+  color: var(--beige_foncé);
+  margin-bottom: 10px;
+  font-family: 'PlayfairDisplay-Italic' , sans-serif;
 }
 .accueil_presentation_signature {
   display: block;
-  font-family: 'Great Vibes', cursive;
-  font-size: 1.5em;
-  color: var(--fond-de-page); /* ou une autre couleur de ton choix */
+  /*font-family: 'Great Vibes', cursive;*/
+  font-family: 'Flatlion' , sans-serif;
+  font-size: 5em;
+  color: var(--beige_foncé); /* ou une autre couleur de ton choix */
   text-align: right;
   margin-top: 30px;
 }
 .accueil_2_fond {
   width: 100vw;
   height: 900px;
-  background: var(--sable);
+  background: var(--beige_clair);
   margin: 5px 0 0 0;
   left: 50%;
   right: 50%;
@@ -66,20 +116,38 @@
 .accueil_2_carre_texte {
   width: 360px; /* Ajuste la taille */
   height: 400px;
-  background: var(--rose-foncé); /* Couleur de fond modifiable */
+  background: var(--fond_clair); /* Couleur de fond modifiable */
   border-radius: 16px;
   margin-top: 15px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  color: var(--fond-de-page); /* Couleur du texte */
+  color: var(--beige_foncé); /* Couleur du texte */
   font-size: 1em;
   box-shadow: 0 2px 8px #457b9d0d;
   text-align: center;
   justify-content: flex-start;
   padding: 10px;
 }
+.accueil_2_carre_texte2 {
+  width: 360px; /* Ajuste la taille */
+  height: 400px;
+  background: var(--vert); /* Couleur de fond modifiable */
+  border-radius: 16px;
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--beige_foncé); /* Couleur du texte */
+  font-size: 1em;
+  box-shadow: 0 2px 8px #457b9d0d;
+  text-align: center;
+  justify-content: flex-start;
+  padding: 10px;
+}
+
 
 
 
