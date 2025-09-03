@@ -1,0 +1,202 @@
+:root {
+  --fond_clair: #f9f5f0;
+  --beige_clair: #ead7c4;
+  --beige_foncé: #a67c52;
+  --police_grise: #6d6d6d;
+}
+body {
+  margin: 0;
+  font-family: 'Montserrat', Arial, sans-serif;
+  background-color: var(--fond_clair);
+}
+.header-top {
+  background: var(--beige_clair);
+  padding: 10px 0 5px 0;
+  /*border-bottom: 1px solid #ddd;*/
+  position: relative;
+}
+.logo {
+  position: absolute;
+  left: 0;
+  top: 30px;
+  height: 120px; /* adapte selon besoin */
+  width: auto;
+  z-index: 10;
+  margin-top: -30px; /* ajuste pour chevaucher le header-main */
+}
+.header-contact {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  max-width: 1700px;
+  margin: 0 20px;
+  font-size: 15px;
+  color: var(--beige_foncé);
+  margin-left: 130px; /* laisse la place au logo */
+}
+.header-contact-content {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.header-contact i {
+  margin-right: 6px;
+}
+.btn-reserver {
+  background: var(--beige_foncé);
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 15px;
+  margin-left: 30px;
+  transition: background 0.2s;
+}
+.btn-reserver:hover {
+  background: var(--beige_foncé);
+}
+.header-main {
+  background: var(--beige_clair);
+  padding: 30px 40px 30px 10px;
+  max-width: 1800px;
+  /*margin: 0 auto;*/
+  padding-left: 130px; /* laisse la place au logo */
+}
+.header-main-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.main-nav {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+.main-nav a {
+  text-decoration: none;
+  color: var(--police_grise);
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  transition: color 0.2s;
+}
+.main-nav .active a {
+  font-weight: bold;
+  border-bottom: 3px solid var(--police_grise);
+  padding-bottom: 2px;
+}
+.main-nav a:hover {
+  color: var(--beige_foncé);
+}
+.social-icons {
+  position: absolute;
+  right: 0;
+  display: flex;
+  gap: 20px;
+}
+.social-icons a {
+  color: var(--beige_foncé);
+  font-size: 28px;
+  transition: color 0.2s;
+}
+.social-icons a:hover {
+  color: var(--beige_foncé);
+}
+footer { /* pied de page */
+    background-color: var(--police_grise); /* Fond pied de page */
+    color: #fff; /* Texte blanc */
+    text-align: center; /* Centré */
+    padding: 10px; /* Padding */
+    width: 100%; /* Largeur totale */
+}
+
+
+/* --- MENU BURGER MOBILE --- */
+.burger-menu {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  position: absolute;
+  right: 20px;
+  top: 30px;
+  z-index: 20;
+}
+
+.burger-menu span {
+  height: 3px;
+  width: 25px;
+  background: var(--beige_foncé);
+  margin: 4px 0;
+  transition: 0.4s;
+}
+
+/* Menu mobile */
+.mobile-nav {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 160px; /* correspond à la nouvelle hauteur du header-top */
+  left: 0;
+  background: var(--beige_clair);
+  width: 100%;
+  padding: 20px 0;
+  z-index: 20;
+}
+
+.mobile-nav a {
+  padding: 14px 20px;
+  color: var(--police_grise);
+  text-decoration: none;
+  font-size: 1.1em;
+  border-bottom: 1px solid #ccc;
+  white-space: normal;
+  word-break: break-word;
+  display: block;
+}
+
+.mobile-nav a:hover {
+  color: var(--beige_foncé);
+}
+
+/* Responsive */
+@media (max-width: 800px) {
+  .header-contact,
+  .main-nav,
+  .social-icons {
+    display: none;
+  }
+
+  .burger-menu {
+    display: flex;
+  }
+
+  .logo {
+    top: 20px;
+    height: 100px;
+  }
+
+  .header-main {
+    padding: 20px 20px 10px 20px;
+  }
+
+  .header-top {
+    height: 50px;
+    padding: 20px 0;
+  }
+
+  .mobile-nav {
+    display: none; /* visible uniquement quand le menu est actif (JS) */
+  }
+
+  .mobile-nav.show {
+    display: flex;
+  }
+}

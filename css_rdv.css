@@ -1,0 +1,47 @@
+.titre-rdv {
+  display: block;
+  font-family: 'Arial', cursive;
+  font-size: 1em;
+  color: var(--gris-police); /* ou une autre couleur de ton choix */
+  text-align: center;
+}
+.annulation-rdv {
+  display: block;
+  font-family: 'Arial', cursive;
+  font-size: 10px;
+  color: #fd0404; /* ou une autre couleur de ton choix */
+  text-align: center;
+  margin-top: 10px;
+}
+.fond_avis_google {
+  width: 100vw;
+  height: 400px;
+  background: var(--rose-foncé);
+  margin: 5px 0 0 0;
+  left: 50%;
+  right: 50%;
+  position: relative;
+  transform: translateX(-50vw);
+  padding: 10px 0;
+}
+
+/*---------------@MEDIA-------------------------------------------------------------------------------*/
+
+@media (max-width: 800px) {
+  /* Titre RDV */
+  .titre-rdv h2 {
+    font-size: 1.4em;
+    padding: 0 10px;
+  }
+
+  /* Texte annulation */
+  .annulation-rdv h2 {
+    font-size: 0.9em;
+    padding: 0 10px;
+  }
+
+  /* Iframe Calendly */
+  iframe {
+    height: 500px; /* Réduit la hauteur sur mobile */
+  }
+}

@@ -1,0 +1,214 @@
+:root {
+  --fond_clair: #f9f5f0;
+  --beige_clair: #ead7c4;
+  --beige_foncé: #a67c52;
+  --police_grise: #6d6d6d;
+  --vert: #d6d4c8;
+}
+.accueil_presentation {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  justify-content: center;
+}
+/*.photo-rond {
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
+  object-position: 30% 30%; 
+  border-radius: 50%;
+  box-shadow: 0 2px 8px var(--beige_foncé);
+  margin-left: 20px;
+}*/
+.photo_accueil_1{
+  /*width: 400px;
+  height: 400px;
+  object-fit: cover;*/
+  margin-left: 20px;
+  margin-top: 20px;
+  height: 600px;
+}
+
+.accueil_presentation_texte-carre {
+  background: var(--beige_clair);
+  border-radius: 16px;
+  padding: 30px 40px;
+  min-width: 230px;
+  min-height: 180px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 20px;
+  margin-right: 20px;
+}
+@font-face {
+  font-family: 'Flatlion';
+  src: url('Flatlion2.ttf') format('truetype');
+  /*font-weight: normal;
+  font-style: normal;*/
+}
+@font-face {
+  font-family: 'PlayfairDisplay-Italic';
+  src: url('PlayfairDisplay-Italic.ttf') format('truetype');
+  /*font-weight: normal;
+  font-style: normal;*/
+}
+.texte1 {
+  font-size: 6em;
+  color: var(--police_grise);
+  margin-bottom: 10px;
+  font-family: 'Flatlion';
+}
+.texte2 {
+  font-size: 1.2em;
+  font-style: italic;
+  color: var(--beige_foncé);
+  margin-bottom: 16px;
+  font-family: 'PlayfairDisplay-Italic' , sans-serif;
+  font-weight: bold;
+}
+.texte3 p {
+  font-size: 1em;
+  color: var(--beige_foncé);
+  margin-bottom: 10px;
+  font-family: 'PlayfairDisplay-Italic' , sans-serif;
+}
+.accueil_presentation_signature {
+  display: block;
+  /*font-family: 'Great Vibes', cursive;*/
+  font-family: 'Flatlion' , sans-serif;
+  font-size: 5em;
+  color: var(--beige_foncé); /* ou une autre couleur de ton choix */
+  text-align: right;
+  margin-top: 30px;
+}
+.accueil_2_fond {
+  width: 100vw;
+  height: 900px;
+  background: var(--beige_clair);
+  margin: 5px 0 0 0;
+  left: 50%;
+  right: 50%;
+  position: relative;
+  transform: translateX(-50vw);
+  padding: 10px 0;
+}
+.accueil_2_images {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0px;
+  height: 60%;
+  margin-top: 120px;
+}
+.accueil_2_item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.accueil_2_item img {
+  width: 80%; /* Ajuste la taille selon tes besoins */
+  height: 50%;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 10px;
+}
+.accueil_2_carre_texte {
+  width: 360px; /* Ajuste la taille */
+  height: 400px;
+  background: var(--fond_clair); /* Couleur de fond modifiable */
+  border-radius: 16px;
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--beige_foncé); /* Couleur du texte */
+  font-size: 1em;
+  box-shadow: 0 2px 8px #457b9d0d;
+  text-align: center;
+  justify-content: flex-start;
+  padding: 10px;
+}
+.accueil_2_carre_texte2 {
+  width: 360px; /* Ajuste la taille */
+  height: 400px;
+  background: var(--vert); /* Couleur de fond modifiable */
+  border-radius: 16px;
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--beige_foncé); /* Couleur du texte */
+  font-size: 1em;
+  box-shadow: 0 2px 8px #457b9d0d;
+  text-align: center;
+  justify-content: flex-start;
+  padding: 10px;
+}
+
+/*---------------@MEDIA-------------------------------------------------------------------------------*/
+
+
+@media (max-width: 800px) {
+  .accueil_presentation {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+
+  .photo_accueil_1 {
+    max-width: 90%;
+    height: auto;
+    margin: 10px auto;
+    display: block;
+  }
+
+  .texte1 {
+    font-size: 2.5em;
+    text-align: center;
+  }
+
+  .texte2 {
+    font-size: 1em;
+    text-align: center;
+  }
+
+  .texte3 p {
+    font-size: 0.95em;
+    text-align: justify;
+  }
+
+  .accueil_presentation_signature {
+    font-size: 2.5em;
+    text-align: center;
+    margin-top: 15px;
+  }
+
+  .accueil_2_images {
+    flex-direction: column;
+    gap: 40px;
+    margin-top: 30px;
+  }
+
+  .accueil_2_item img {
+    width: 90%;
+    height: auto;
+  }
+
+  .accueil_2_carre_texte,
+  .accueil_2_carre_texte2 {
+    width: 90vw;
+    height: auto;
+    min-width: unset;
+    min-height: unset;
+    padding: 20px 10px;
+    font-size: 0.95em;
+  }
+
+  .accueil_2_fond {
+    height: auto;
+    padding-bottom: 40px;
+  }
+}

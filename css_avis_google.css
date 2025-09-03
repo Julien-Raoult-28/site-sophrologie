@@ -1,0 +1,40 @@
+.fond_avis_google {
+  width: 100vw;
+  height: 600px;
+  background: var(--rose-foncé);
+  margin: 0px 0 0 0;
+  left: 50%;
+  right: 50%;
+  position: relative;
+  transform: translateX(-50vw);
+  padding: 20px 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/*---------------@MEDIA-------------------------------------------------------------------------------*/
+
+@media (max-width: 800px) {
+  /* Conteneur avis Google */
+  .fond_avis_google {
+    padding: 10px;
+    height: auto; /* Supprime la hauteur fixe */
+  }
+
+  /* Widget Elfsight */
+  .fond_avis_google .elfsight-app-3a10fc5f-1b91-4614-8652-b84182e79186 {
+    max-width: 100%;
+  }
+
+  /* Ajustement du header */
+  .header-contact-content {
+    flex-direction: column;
+    gap: 5px;
+    text-align: center;
+  }
+
+  /* Ajustement du logo */
+  .logo {
+    max-width: 80%;
+    height: auto;
+  }
+}
