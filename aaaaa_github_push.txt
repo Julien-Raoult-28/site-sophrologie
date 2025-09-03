@@ -1,0 +1,26 @@
+si connexion ok alors 
+git add .
+git commit -m "Ajout du site Harmonie de Soie"
+git push -u origin main
+
+
+si ça ne va pas :
+git init
+git add .
+git commit -m "Ajout du site Harmonie de Soie"
+git remote add origin https://github.com/Julien-Raoult-28/site-sophrologie.git 
+git branch -M main
+git push -u origin main
+
+et
+
+Option 1 : Fusionner le contenu distant avec ton dépôt local (recommandé si tu veux garder ce qui est déjà sur GitHub)
+
+git pull origin main --allow-unrelated-histories
+git push -u origin main
+
+Cela va récupérer les fichiers distants, fusionner avec les tiens, puis pousser le tout.
+
+Option 2 : Écraser complètement le contenu distant (⚠️ cela supprimera ce qui est sur GitHub pour mettre uniquement tes fichiers locaux)
+
+git push -u origin main --force

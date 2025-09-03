@@ -9,6 +9,14 @@ body {
   font-family: 'Montserrat', Arial, sans-serif;
   background-color: var(--fond_clair);
 }
+.seo-h1 {
+  position: absolute; /* Le place hors du flux visuel */
+  left: -9999px; /* Le déplace très loin à gauche */
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  white-space: nowrap;
+}
 .header-top {
   background: var(--beige_clair);
   padding: 10px 0 5px 0;
