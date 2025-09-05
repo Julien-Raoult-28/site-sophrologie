@@ -258,6 +258,39 @@ footer {
 .mobile-nav a:hover {
   color: var(--beige_foncé);
 }
+/* Dropdown mobile */
+.mobile-dropdown {
+  display: flex;
+  flex-direction: column;
+}
+
+.mobile-dropdown-btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 20px;
+  color: var(--police_grise);
+  text-decoration: none;
+  font-size: 1.1em;
+  border-bottom: 1px solid #ccc;
+  cursor: pointer;
+}
+
+.mobile-dropdown-content {
+  display: none;
+  flex-direction: column;
+  background-color: var(--beige_clair);
+}
+
+.mobile-dropdown-content a {
+  padding: 10px 40px; /* décale un peu pour montrer que c'est un sous-menu */
+  font-size: 1em;
+  border-bottom: none;
+}
+
+.mobile-dropdown-content a:hover {
+  background-color: #e6d6c2;
+}
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 800px) {
