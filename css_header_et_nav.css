@@ -4,34 +4,39 @@
   --beige_foncé: #a67c52;
   --police_grise: #6d6d6d;
 }
+
 body {
   margin: 0;
   font-family: 'Montserrat', Arial, sans-serif;
   background-color: var(--fond_clair);
 }
+
 .seo-h1 {
-  position: absolute; /* Le place hors du flux visuel */
-  left: -9999px; /* Le déplace très loin à gauche */
+  position: absolute;
+  left: -9999px;
   width: 1px;
   height: 1px;
   overflow: hidden;
   white-space: nowrap;
 }
+
+/* ===== HEADER ===== */
 .header-top {
   background: var(--beige_clair);
   padding: 10px 0 5px 0;
-  /*border-bottom: 1px solid #ddd;*/
   position: relative;
 }
+
 .logo {
   position: absolute;
   left: 0;
   top: 30px;
-  height: 120px; /* adapte selon besoin */
+  height: 120px;
   width: auto;
   z-index: 10;
-  margin-top: -30px; /* ajuste pour chevaucher le header-main */
+  margin-top: -30px;
 }
+
 .header-contact {
   display: flex;
   align-items: center;
@@ -40,16 +45,19 @@ body {
   margin: 0 20px;
   font-size: 15px;
   color: var(--beige_foncé);
-  margin-left: 130px; /* laisse la place au logo */
+  margin-left: 130px;
 }
+
 .header-contact-content {
   display: flex;
   align-items: center;
   gap: 30px;
 }
+
 .header-contact i {
   margin-right: 6px;
 }
+
 .btn-reserver {
   background: var(--beige_foncé);
   color: #fff;
@@ -60,34 +68,39 @@ body {
   margin-left: 30px;
   transition: background 0.2s;
 }
+
 .btn-reserver:hover {
   background: var(--beige_foncé);
 }
+
 .header-main {
   background: var(--beige_clair);
-  padding: 30px 40px 30px 10px;
+  padding: 30px 40px 30px 130px; /* laisse place au logo */
   max-width: 1800px;
-  /*margin: 0 auto;*/
-  padding-left: 130px; /* laisse la place au logo */
 }
+
 .header-main-wrapper {
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
 }
+
+/* ===== MENU PRINCIPAL ===== */
 .main-nav {
   flex: 1;
   display: flex;
   justify-content: center;
 }
-.main-nav ul {
+
+.main-nav > ul {
   list-style: none;
   display: flex;
-  gap: 30px;
+  gap: 30px; /* espace entre items du menu principal */
   margin: 0;
   padding: 0;
 }
+
 .main-nav a {
   text-decoration: none;
   color: var(--police_grise);
@@ -96,38 +109,113 @@ body {
   letter-spacing: 1px;
   transition: color 0.2s;
 }
+
 .main-nav .active a {
   font-weight: bold;
   border-bottom: 3px solid var(--police_grise);
   padding-bottom: 2px;
 }
+
 .main-nav a:hover {
   color: var(--beige_foncé);
 }
+
+/* ===== DROPDOWN (sous-menu) ===== */
+.main-nav ul li {
+  position: relative;
+}
+
+.main-nav ul li a {
+  padding: 10px 15px;
+  display: inline-block;
+  color: var(--police_grise);
+  text-decoration: none;
+}
+
+/* Sous-menu */
+.dropdown-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: var(--fond_clair);
+  min-width: 200px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  z-index: 1000;
+  transition: opacity 0.2s ease, visibility 0.2s ease;
+  margin: 0;
+  padding: 0;
+  overflow: hidden; /* <-- empêche le hover de dépasser */
+}
+
+.dropdown-content li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.dropdown-content a {
+  display: block;
+  width: 100%;      /* <-- lien fait exactement la largeur du menu */
+  box-sizing: border-box; /* <-- inclut padding dans la largeur */
+  padding: 5px 10px;
+  line-height: 1.2;
+  color: var(--beige_foncé);
+  text-decoration: none;
+  white-space: nowrap;
+  border-radius: 0; /* <-- enlève arrondi interne pour hover */
+}
+
+.dropdown-content a:hover {
+  background-color: var(--beige_clair);
+}
+
+
+/* Affiche le sous-menu au survol */
+.dropdown:hover .dropdown-content {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Petite flèche pour les items avec sous-menu */
+.fa-caret-down {
+  margin-left: 5px;
+  font-size: 0.8em;
+}
+
+/* ===== SOCIAL ICONS ===== */
 .social-icons {
   position: absolute;
   right: 0;
   display: flex;
   gap: 20px;
 }
+
 .social-icons a {
   color: var(--beige_foncé);
   font-size: 28px;
   transition: color 0.2s;
 }
+
 .social-icons a:hover {
   color: var(--beige_foncé);
 }
-footer { /* pied de page */
-    background-color: var(--police_grise); /* Fond pied de page */
-    color: #fff; /* Texte blanc */
-    text-align: center; /* Centré */
-    padding: 10px; /* Padding */
-    width: 100%; /* Largeur totale */
+
+/* ===== FOOTER ===== */
+footer {
+  background-color: var(--police_grise);
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  width: 100%;
 }
 
-
-/* --- MENU BURGER MOBILE --- */
+/* ===== MENU BURGER MOBILE ===== */
 .burger-menu {
   display: none;
   flex-direction: column;
@@ -146,12 +234,11 @@ footer { /* pied de page */
   transition: 0.4s;
 }
 
-/* Menu mobile */
 .mobile-nav {
   display: none;
   flex-direction: column;
   position: absolute;
-  top: 160px; /* correspond à la nouvelle hauteur du header-top */
+  top: 160px;
   left: 0;
   background: var(--beige_clair);
   width: 100%;
@@ -165,8 +252,6 @@ footer { /* pied de page */
   text-decoration: none;
   font-size: 1.1em;
   border-bottom: 1px solid #ccc;
-  white-space: normal;
-  word-break: break-word;
   display: block;
 }
 
@@ -174,7 +259,7 @@ footer { /* pied de page */
   color: var(--beige_foncé);
 }
 
-/* Responsive */
+/* ===== RESPONSIVE ===== */
 @media (max-width: 800px) {
   .header-contact,
   .main-nav,
@@ -192,7 +277,7 @@ footer { /* pied de page */
   }
 
   .header-main {
-    padding: 20px 20px 10px 20px;
+    padding: 20px;
   }
 
   .header-top {
@@ -201,7 +286,7 @@ footer { /* pied de page */
   }
 
   .mobile-nav {
-    display: none; /* visible uniquement quand le menu est actif (JS) */
+    display: none;
   }
 
   .mobile-nav.show {

@@ -113,39 +113,32 @@
   border-radius: 12px;
   margin-bottom: 10px;
 }
-.accueil_2_carre_texte {
-  width: 360px; /* Ajuste la taille */
+.accueil_2_carre_texte,
+.accueil_2_carre_texte2 {
+  width: 360px;
   height: 400px;
-  background: var(--fond_clair); /* Couleur de fond modifiable */
+  background: var(--fond_clair);
   border-radius: 16px;
   margin-top: 15px;
   display: flex;
-  flex-direction: column;
+  flex-direction: column;  /* on empile le contenu */
   align-items: center;
-  justify-content: center;
-  color: var(--beige_foncé); /* Couleur du texte */
+  justify-content: flex-start;
+  color: var(--beige_foncé);
   font-size: 1em;
   box-shadow: 0 2px 8px #457b9d0d;
   text-align: center;
-  justify-content: flex-start;
   padding: 10px;
 }
+
 .accueil_2_carre_texte2 {
-  width: 360px; /* Ajuste la taille */
-  height: 400px;
-  background: var(--vert); /* Couleur de fond modifiable */
-  border-radius: 16px;
-  margin-top: 15px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  color: var(--beige_foncé); /* Couleur du texte */
-  font-size: 1em;
-  box-shadow: 0 2px 8px #457b9d0d;
-  text-align: center;
-  justify-content: flex-start;
-  padding: 10px;
+  background: var(--vert); /* la variante verte */
+}
+
+/* cibler le <p> contenant le lien */
+.accueil_2_carre_texte p:last-child,
+.accueil_2_carre_texte2 p:last-child {
+  margin-top: auto; /* pousse le lien en bas */
 }
 
 /*---------------@MEDIA-------------------------------------------------------------------------------*/
