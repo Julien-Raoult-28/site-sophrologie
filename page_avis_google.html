@@ -1,81 +1,107 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head >
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css_header_et_nav.css">
-    <link rel="stylesheet" href="css_avis_google.css">
+    <link rel="stylesheet" href="css_accueil.css">
     <link href="https://fonts.googleapis.com/css?family=Indie+Flower:400,700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Great+Vibes:400,700&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Great+Vibes:400,700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Flatlion:400,700&display=swap" rel="stylesheet">
     <!-- Font Awesome pour les icônes -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <!-- Google Fonts pour le logo (optionnel) -->
     <link href="https://fonts.googleapis.com/css?family=Dancing+Script:700&display=swap" rel="stylesheet">
-    <title >Harmonie de Soie</title>
+    <title>Harmonie de Soie</title>
   </head>
-  <body >
+  <body>
   <h1 class="seo-h1">
   Harmonie de Soie – Cathy Coquelet – Sophrologue à proximité de Compiègne (Longueil-Sainte-Marie)
   </h1>
-    <header class="header-top">
-      <img src="logo6.png" alt="Logo" class="logo">
-      <!-- Menu burger pour mobile -->
-      <div class="burger-menu" onclick="toggleMenu()">
-        <span ></span>
-        <span ></span>
-        <span ></span>
+  <header class="header-top">
+    <img src="logo6.png" alt="Logo" class="logo">
+    <!------------------------------------------------------------>
+    <div class="burger-menu" onclick="toggleMenu()">
+  <span></span>
+  <span></span>
+  <span></span>
+</div>
+
+<nav class="mobile-nav" id="mobileNav">
+  <a href="page_accueil.html"><i class="fa-solid fa-house"></i> ACCUEIL</a>
+  <a href="page_professionnel.html"><i class="fa-solid fa-building-user"></i> PROFESSIONELS</a>
+  <div class="mobile-dropdown">
+  <a href="page_seance_adulte.html" class="mobile-dropdown-btn">
+    <i class="fa-solid fa-comments"></i> SÉANCE INDIVIDUELLE <i class="fa fa-caret-down"></i>
+  </a>
+  <div class="mobile-dropdown-content">
+    <a href="page_seance_adulte.html">Séance adulte</a>
+    <a href="page_seance_enfant.html">Séance enfant</a>
+    <a href="page_seance_senior.html">Séance senior / handicap</a>
+  </div>
+</div>
+  <a href="page_rdv.html"><i class="fa-solid fa-calendar-days"></i> PRENDRE RDV</a>
+
+  <!-- Bloc des icônes sociales -->
+  <div class="mobile-social-icons">
+    <a href="page_avis_google.html">
+      <img src="img_picto_avis_google_2.png" alt="Avis Google" class="google-review-img">
+    </a>
+    <a href="https://www.linkedin.com/in/julien-raoult-a119a7129/" target="_blank">
+      <i class="fa-brands fa-linkedin"></i>
+    </a>
+    <a href="https://www.facebook.com/profile.php?id=61575035198256" target="_blank">
+      <i class="fa-brands fa-facebook"></i>
+    </a>
+    <a href="https://www.instagram.com/escape_zen/" target="_blank">
+      <i class="fa-brands fa-instagram"></i>
+    </a>
+  </div>
+</nav>
+<!------------------------------------------------------------>
+    <div class="header-contact">
+      <div class="header-contact-content">
+        <span ><i class="fa fa-phone"></i> +33 6 00 00 00 00</span>
+        <span ><i class="fa fa-envelope"></i> info@exemple.fr</span>
+        <span ><i class="fa fa-clock-o"></i> Lun - Ven : 9:00 - 18:30</span>
+        <a href="page_rdv.html" class="btn-reserver">Prendre RDV</a>
       </div>
-      <nav class="mobile-nav" id="mobileNav">
-        <a href="page_accueil.html"><i class="fa-solid fa-house"></i> ACCUEIL</a>
-        <a href="page_professionnel.html"><i class="fa-solid fa-building-user"></i> PROFESSIONELS</a>
-        <a href="page_seance.html"><i class="fa-solid fa-comments"></i> SÉANCE INDIVIDUELLE</a>
-        <a href="page_rdv.html"><i class="fa-solid fa-calendar-days"></i> PRENDRE RDV</a>
-        <div class="mobile-social-icons">
-          <a href="page_avis_google.html">
-            <img src="img_picto_avis_google_2.png" alt="Avis Google" class="google-review-img">
-          </a>
-          <a href="https://www.linkedin.com/in/julien-raoult-a119a7129/" target="_blank">
-            <i class="fa-brands fa-linkedin"></i>
-          </a>
-          <a href="https://www.facebook.com/profile.php?id=61575035198256" target="_blank">
-            <i class="fa-brands fa-facebook"></i>
-          </a>
-          <a href="https://www.instagram.com/escape_zen/" target="_blank">
-            <i class="fa-brands fa-instagram"></i>
-          </a>
-        </div>
-      </nav>
-      <div class="header-contact">
-        <div class="header-contact-content">
-          <span ><i class="fa fa-phone"></i> +33 6 00 00 00 00</span>
-          <span ><i class="fa fa-envelope"></i> info@exemple.fr</span>
-          <span ><i class="fa fa-clock-o"></i> Lun - Ven : 9:00 - 18:30</span>
-          <a href="#" class="btn-reserver">Prendre RDV</a>
-        </div>
-      </div>
-    </header>
-    <header class="header-main">
-      <div class="header-main-wrapper">
-        <nav class="main-nav">
-          <ul >
-            <li ><a href="page_accueil.html"><i class="fa-solid fa-house"></i>ACCUEIL</a></li>
-            <li ><a href="page_professionnel.html"><i class="fa-solid fa-building-user"></i>PROFESSIONELS</a></li>
-            <li ><a href="page_seance.html"><i class="fa-solid fa-comments"></i>SÉANCE INDIVIDUELLE</a></li>
-            <li ><a href="page_rdv.html"><i class="fa-solid fa-calendar-days"></i>PRENDRE RDV</a></li>
+    </div>
+  </header>
+  <header class="header-main">
+    <div class="header-main-wrapper">
+      <nav class="main-nav">
+          <ul>
+            <li><a href="page_accueil.html"><i class="fa-solid fa-house"></i>ACCUEIL</a></li>
+            <li><a href="page_professionnel.html"><i class="fa-solid fa-building-user"></i>PROFESSIONELS</a></li>
+            <li class="dropdown">
+              <a href="page_seance_adulte.html">
+                <i class="fa-solid fa-comments"></i> SÉANCE INDIVIDUELLE <i class="fa fa-caret-down"></i>
+              </a>
+              <ul class="dropdown-content">
+                <li><a href="page_seance_adulte.html">Séance adulte</a></li>
+                <li><a href="page_seance_enfant.html">Séance enfant</a></li>
+                <li><a href="page_seance_senior.html">Séance senior / handicap</a></li>
+              </ul>
+            </li>
+            <li><a href="page_rdv.html"><i class="fa-solid fa-calendar-days"></i>PRENDRE RDV</a></li>
+            <!--<li class="dropdown">
+              <a href="#">AUTRES PAGES <i class="fa fa-caret-down"></i></a>
+            </li>-->
           </ul>
         </nav>
         <div class="social-icons">
-          <a href="page_avis_google.html" class="google-review-link">
-            <img src="img_picto_avis_google_2.png" alt="Avis Google" class="google-review-img">
-          </a>
+          <a href="page_avis_google.html"  class="google-review-link">
+    <img src="img_picto_avis_google_2.png" alt="Avis Google" class="google-review-img">
+  </a>
           <a href="https://www.linkedin.com/in/julien-raoult-a119a7129/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
           <a href="https://www.facebook.com/profile.php?id=61575035198256" target="_blank"><i class="fa-brands fa-facebook"></i></a>
           <a href="https://www.instagram.com/escape_zen/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
         </div>
       </div>
     </header>
+    <main>
     <div class="fond_avis_google">
       <!-- Elfsight Google Reviews -->
       <script src="https://static.elfsight.com/platform/platform.js" async></script>
@@ -100,19 +126,37 @@
     <a href="page_professionnel.html" style="color: white; text-decoration: underline;"> Interventions en maison de retraite (EHPAD)</a>
   </p>
 </footer>
-    <script >
-      function toggleMenu() {
-        const menu = document.getElementById('mobileNav');
-        menu.style.display = (menu.style.display === 'flex') ? 'none' : 'flex';
-      }
-      document.addEventListener("DOMContentLoaded", function () {
-        const links = document.querySelectorAll(".mobile-nav a");
-        links.forEach(link => {
-          link.addEventListener("click", () => {
-            document.getElementById("mobileNav").style.display = "none";
-          });
-        });
-      });
-    </script>
+    <!------------------------------------------------------------->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const mobileMenu = document.getElementById('mobileNav');
+  const burger = document.querySelector('.burger-menu');
+  const dropdownBtn = document.querySelector(".mobile-dropdown-btn");
+  const dropdownContent = document.querySelector(".mobile-dropdown-content");
+
+  // Toggle menu principal
+  burger.addEventListener('click', function() {
+    mobileMenu.style.display = (mobileMenu.style.display === 'flex') ? 'none' : 'flex';
+  });
+
+  // Toggle sous-menu "SÉANCE INDIVIDUELLE"
+  dropdownBtn.addEventListener("click", function(e) {
+    e.preventDefault(); // empêche le lien principal
+    dropdownContent.style.display = (dropdownContent.style.display === "flex") ? "none" : "flex";
+  });
+
+  // Fermer le menu principal quand on clique sur un autre lien (sauf le bouton du sous-menu)
+  const mobileLinks = document.querySelectorAll(".mobile-nav a:not(.mobile-dropdown-btn)");
+  mobileLinks.forEach(link => {
+    link.addEventListener("click", () => {
+      mobileMenu.style.display = "none";
+      dropdownContent.style.display = "none"; // on ferme aussi le sous-menu
+    });
+  });
+});
+</script>
+
+
+ <!------------------------------------------------------------->
   </body>
 </html>

@@ -31,7 +31,16 @@
 <nav class="mobile-nav" id="mobileNav">
   <a href="page_accueil.html"><i class="fa-solid fa-house"></i> ACCUEIL</a>
   <a href="page_professionnel.html"><i class="fa-solid fa-building-user"></i> PROFESSIONELS</a>
-  <a href="page_seance.html"><i class="fa-solid fa-comments"></i> SÉANCE INDIVIDUELLE</a>
+  <div class="mobile-dropdown">
+  <a href="page_seance_adulte.html" class="mobile-dropdown-btn">
+    <i class="fa-solid fa-comments"></i> SÉANCE INDIVIDUELLE <i class="fa fa-caret-down"></i>
+  </a>
+  <div class="mobile-dropdown-content">
+    <a href="page_seance_adulte.html">Séance adulte</a>
+    <a href="page_seance_enfant.html">Séance enfant</a>
+    <a href="page_seance_senior.html">Séance senior / handicap</a>
+  </div>
+</div>
   <a href="page_rdv.html"><i class="fa-solid fa-calendar-days"></i> PRENDRE RDV</a>
 
   <!-- Bloc des icônes sociales -->
@@ -66,7 +75,16 @@
           <ul>
             <li><a href="page_accueil.html"><i class="fa-solid fa-house"></i>ACCUEIL</a></li>
             <li class="active"><a href="page_professionnel.html"><i class="fa-solid fa-building-user"></i>PROFESSIONELS</a></li>
-            <li><a href="page_seance.html"><i class="fa-solid fa-comments"></i>SÉANCE INDIVIDUELLE</a></li>
+            <li class="dropdown">
+              <a href="page_seance_adulte.html">
+                <i class="fa-solid fa-comments"></i> SÉANCE INDIVIDUELLE <i class="fa fa-caret-down"></i>
+              </a>
+              <ul class="dropdown-content">
+                <li><a href="page_seance_adulte.html">Séance adulte</a></li>
+                <li><a href="page_seance_enfant.html">Séance enfant</a></li>
+                <li><a href="page_seance_senior.html">Séance senior / handicap</a></li>
+              </ul>
+            </li>
             <li><a href="page_rdv.html"><i class="fa-solid fa-calendar-days"></i>PRENDRE RDV</a></li>
             <!--<li class="dropdown">
               <a href="#">AUTRES PAGES <i class="fa fa-caret-down"></i></a>
@@ -133,22 +151,36 @@
   </p>
 </footer>
     <!------------------------------------------------------------->
-    <script>
-  function toggleMenu() {
-    const menu = document.getElementById('mobileNav');
-    menu.style.display = (menu.style.display === 'flex') ? 'none' : 'flex';
-  }
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const mobileMenu = document.getElementById('mobileNav');
+  const burger = document.querySelector('.burger-menu');
+  const dropdownBtn = document.querySelector(".mobile-dropdown-btn");
+  const dropdownContent = document.querySelector(".mobile-dropdown-content");
 
-  // Optionnel : refermer le menu quand on clique sur un lien
-  document.addEventListener("DOMContentLoaded", function () {
-    const links = document.querySelectorAll(".mobile-nav a");
-    links.forEach(link => {
-      link.addEventListener("click", () => {
-        document.getElementById("mobileNav").style.display = "none";
-      });
+  // Toggle menu principal
+  burger.addEventListener('click', function() {
+    mobileMenu.style.display = (mobileMenu.style.display === 'flex') ? 'none' : 'flex';
+  });
+
+  // Toggle sous-menu "SÉANCE INDIVIDUELLE"
+  dropdownBtn.addEventListener("click", function(e) {
+    e.preventDefault(); // empêche le lien principal
+    dropdownContent.style.display = (dropdownContent.style.display === "flex") ? "none" : "flex";
+  });
+
+  // Fermer le menu principal quand on clique sur un autre lien (sauf le bouton du sous-menu)
+  const mobileLinks = document.querySelectorAll(".mobile-nav a:not(.mobile-dropdown-btn)");
+  mobileLinks.forEach(link => {
+    link.addEventListener("click", () => {
+      mobileMenu.style.display = "none";
+      dropdownContent.style.display = "none"; // on ferme aussi le sous-menu
     });
   });
+});
 </script>
+
+
  <!------------------------------------------------------------->
   </body>
 </html>

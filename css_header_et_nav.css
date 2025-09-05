@@ -131,6 +131,12 @@ body {
   color: var(--police_grise);
   text-decoration: none;
 }
+.main-nav > ul > li.active > a {
+  font-weight: bold;
+  border-bottom: 3px solid var(--police_grise);
+  padding-bottom: 2px;
+}
+
 
 /* Sous-menu */
 .dropdown-content {
@@ -170,6 +176,12 @@ body {
   white-space: nowrap;
   border-radius: 0; /* <-- enlève arrondi interne pour hover */
 }
+/* Les liens du sous-menu ne doivent jamais être soulignés même si le parent est 'active' */
+.main-nav .dropdown-content a {
+  font-weight: normal;
+  border-bottom: none;
+}
+
 
 .dropdown-content a:hover {
   background-color: var(--beige_clair);
