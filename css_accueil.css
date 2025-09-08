@@ -5,6 +5,7 @@
   --police_grise: #6d6d6d;
   --vert: #d6d4c8;
 }
+
 .accueil_presentation {
   display: flex;
   align-items: center;
@@ -132,7 +133,8 @@
 }
 
 .accueil_2_carre_texte2 {
-  background: var(--vert); /* la variante verte */
+  background: #e1c3a5; /* la variante verte */
+  color: #fff;
 }
 
 /* cibler le <p> contenant le lien */

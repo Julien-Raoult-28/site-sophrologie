@@ -10,6 +10,21 @@ body {
   font-family: 'Montserrat', Arial, sans-serif;
   background-color: var(--fond_clair);
 }
+.h1-bar {
+  width: 100%;
+  background-color: #e1c3a5; /* même couleur que ton fond ou autre discrète */
+  text-align: center;
+  padding: 5px 0;       /* hauteur d’une ligne environ */
+  box-sizing: border-box;
+}
+
+.h1-bar h1 {
+  font-size: 1rem;       /* petit mais lisible pour Google */
+  margin: 0;
+  font-weight: normal;
+  color: #fff; /* couleur discrète */
+  line-height: 1.2;
+}
 
 .seo-h1 {
   position: absolute;
