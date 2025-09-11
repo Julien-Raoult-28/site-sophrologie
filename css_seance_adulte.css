@@ -13,6 +13,11 @@
   /*font-weight: normal;
   font-style: normal;*/
 }
+body {
+  margin: 0;
+  padding: 0;
+}
+
 /*-------------------------------------------------------------------------*/
 .pk-container {
   display: flex;
@@ -20,11 +25,11 @@
   align-items: flex-start;
   gap: 10px;
   margin-top: 30px;
-  margin-left: 10px;
+  /*margin-left: 10px;*/
   align-items: center; /* Centrage vertical */
 }
 .pk-text {
-  flex: 1;
+  flex: 2;
   margin-left: 50px;
   /*padding: 10px;*/
 }
@@ -38,7 +43,7 @@
   margin-bottom: 20px;
   font-size: 1em;
   color: var(--police_grise);
-  font-family: 'PlayfairDisplay-Italic';
+  /*ont-family: 'PlayfairDisplay-Italic';*/
 }
 .pk-texte3 {
   margin-bottom: 10px;
@@ -55,18 +60,17 @@
 .pk-texte4 li::after {
   content: "";
   display: block;
-  width: 600px; /* largeur fixe de la ligne */
+  width: 750px; /* largeur fixe de la ligne */
   max-width: 100%;
-  height: 2px;
+  height: 1px;
   background: var(--beige_foncé);
-  margin: 10px auto 20px 0;
+  margin: 1px auto 5px 0;
   border-radius: 1px;
 }
 .pk-texte5 {
   margin-bottom: 10px;
-  font-size: 1.5em;
+  font-size: 1em;
   color: var(--police_grise);
-  font-family: 'PlayfairDisplay-Italic';
 }
 .pk-image1 {
   flex: 1;
@@ -82,57 +86,26 @@
   max-width: 100%;
 }
 /*-------------------------------------------------------------------------*/
-.separateur-container {
-  height:50px;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 10px;
-  margin-top: 80px;
-  margin-left: 0;
-  align-items: center; /* Centrage vertical */
-  background-color: var(--fond-clair2);
-}
-.separateur-image1 {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 80px ;
-  margin-right: 10px ;
-}
-.separateur-image1 img {
-  width: 100%;
-  max-width: 100%;
-}
+
 /*-------------------------------------------------------------------------*/
 .seance-container {
   display: flex;
+  background-color: var(--beige_clair) ;
   justify-content: center;
   align-items: flex-start;
   gap: 10px;
-  margin-top: 150px;
-  margin-left: 10px;
+  margin-top: 50px;
+  /*margin-left: 10px;*/
   align-items: center; /* Centrage vertical */
 }
-.seance-image1 {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 20px ;
-  /*margin-right: 10px ;*/
-}
-.seance-image1 img {
-  height: auto;
-  width: 400px;
-  max-width: 100%;
-}
 .seance-text {
-  flex: 2;
-  margin-left: 1px;
-  /*padding: 10px;*/
+  flex: 3;
+  margin-left: 10px;
+  display: flex;
+  flex-direction: column; /* pour garder la verticalité */
+  align-items: center;    /* centre horizontalement tous les enfants */
 }
+
 .seance-texte1 {
   font-size: 2em;
   color: var(--beige_foncé);
@@ -146,11 +119,11 @@
 .seance-texte3 li::after {
   content: "";
   display: block;
-  width: 600px; /* largeur fixe de la ligne */
+  width: 100%; /* largeur fixe de la ligne */
   max-width: 100%;
-  height: 2px;
+  height: 1px;
   background: var(--beige_foncé);
-  margin: 10px auto 20px 0;
+  margin: 0px auto 10px 0;
   border-radius: 1px;
 }
 .seance-image2 {
@@ -163,12 +136,11 @@
 }
 .seance-image2 img {
   height:auto;
-  width: 400px;
+  width: 200px;
   max-width: 100%;
 }
 
 /*---------------@MEDIA-------------------------------------------------------------------------------*/
-
 @media (max-width: 800px) {
   /* Bloc Pourquoi consulter */
   .pk-container {
@@ -198,6 +170,7 @@
 
   .pk-texte4 {
     font-size: 0.95em;
+    text-align: left;
   }
 
   .pk-texte4 li::after {
@@ -236,21 +209,11 @@
     align-items: center;
   }
 
-   .seance-image1 img {
-    max-width: 90%;
-    height: auto;
-    max-height: 300px; /* Limite la hauteur sur mobile */
-    object-fit: contain; /* Garde les proportions */
-  }
-  .seance-image2 img {
-    max-width: 90%;
-    height: auto;
-  }
-
   .seance-text {
     margin-left: 0;
     padding: 10px;
     text-align: center;
+    align-items: center; /* garde les enfants centrés horizontalement */
   }
 
   .seance-texte1 {
@@ -259,10 +222,24 @@
 
   .seance-texte3 {
     font-size: 0.95em;
+    text-align: left;
   }
 
   .seance-texte3 li::after {
     width: 100%;
   }
+
+  .seance-image2 {
+    margin: 0;
+    justify-content: center;
+  }
+
+  .seance-image2 img {
+    max-width: 90%;
+    height: auto;
+    max-height: 250px; /* pour éviter une image trop grande */
+    object-fit: contain;
+  }
 }
+
 

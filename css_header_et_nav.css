@@ -4,7 +4,11 @@
   --beige_foncé: #a67c52;
   --police_grise: #6d6d6d;
 }
-
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* empêche le scroll horizontal fantôme */
+}
 body {
   margin: 0;
   font-family: 'Montserrat', Arial, sans-serif;
