@@ -237,43 +237,9 @@ body {
   color: var(--beige_foncé);
 }
 
-/* ===== FOOTER ===== */
-/*footer {
-  background-color: var(--police_grise);
-  color: #fff;
-  text-align: center;
-  padding: 10px;
-  width: 100%;
-}*/
-.footer-entete {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 5px;
-  margin: 0px 0;
-  background-color: var(--police_grise);
-  color: #fff;
-}
-.footer-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr; /* 3 colonnes égales */
-  justify-items: center;              /* centre chaque bloc dans sa colonne */
-  align-items: start;                 /* aligne en haut */
-  background-color: var(--police_grise);
-  color: #fff;
-  padding: 20px;
-  margin-top: 0;
-}
 
-.footer-texte1,
-.footer-texte2,
-.footer-texte3 {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;  /* contenu aligné à gauche dans sa colonne */
-  gap: 5px;
-}
-/*----------------------------TEST FOOTER----------------------------------------------------------*/
+
+/*----------------------------FOOTER----------------------------------------------------------*/
 .site-footer {
   background: #f5f5f5;
   padding: 40px 60px;
