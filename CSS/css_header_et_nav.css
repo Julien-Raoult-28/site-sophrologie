@@ -238,13 +238,156 @@ body {
 }
 
 /* ===== FOOTER ===== */
-footer {
+/*footer {
   background-color: var(--police_grise);
   color: #fff;
   text-align: center;
   padding: 10px;
   width: 100%;
+}*/
+.footer-entete {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  margin: 0px 0;
+  background-color: var(--police_grise);
+  color: #fff;
 }
+.footer-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr; /* 3 colonnes égales */
+  justify-items: center;              /* centre chaque bloc dans sa colonne */
+  align-items: start;                 /* aligne en haut */
+  background-color: var(--police_grise);
+  color: #fff;
+  padding: 20px;
+  margin-top: 0;
+}
+
+.footer-texte1,
+.footer-texte2,
+.footer-texte3 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;  /* contenu aligné à gauche dans sa colonne */
+  gap: 5px;
+}
+/*----------------------------TEST FOOTER----------------------------------------------------------*/
+.site-footer {
+  background: #f5f5f5;
+  padding: 40px 60px;
+  font-family: Arial, sans-serif;
+  color: var(--beige_foncé);
+}
+
+/* Colonnes */
+.footer-columns {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 40px;
+}
+.footer-col h2 {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+.footer-col p {
+  font-size: 0.9em;
+  margin: 0 0 10px 0;
+  color: #666;
+}
+
+.footer-col img {
+  width: 200px;
+  margin-top: 10px;
+}
+.footer-col h3 {
+  font-size: 0.95em;
+  margin-bottom: 10px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.footer-col ul li {
+  margin-bottom: 6px;
+  font-size: 0.9em;
+  color: #003b4a;
+}
+.footer-col ul li a {
+  color: #003b4a;
+  text-decoration: none;
+}
+.footer-col ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Bas du footer */
+.footer-bottom {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 20px;
+  border-radius: 25px;
+  font-size: 0.9em;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+.btn.foot {
+  background: var(--beige_foncé);
+  color: #fff;
+}
+.btn.foot:hover {
+  background: #007b8a;
+}
+/* Style du modal */
+.modal {
+  display: none; /* caché par défaut */
+  position: fixed;
+  z-index: 1000; /* au-dessus de tout */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto; /* scroll si contenu trop grand */
+  background-color: rgba(0,0,0,0.5); /* fond semi-transparent */
+}
+
+/* Contenu du modal */
+.modal-content {
+  background-color: var(--fond_clair);
+  margin: 15% auto;
+  padding: 20px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 400px;
+  color: var(--police_grise);
+  text-align: center;
+}
+
+/* Bouton fermer */
+.modal .close {
+  color: #003b4a;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.modal .close:hover {
+  color: #007b8a;
+}
+
+
 
 /* ===== MENU BURGER MOBILE ===== */
 .burger-menu {
