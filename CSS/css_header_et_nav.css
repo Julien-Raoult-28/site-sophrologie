@@ -466,3 +466,39 @@ body {
     display: flex;
   }
 }
+/* ===== FOOTER RESPONSIVE ===== */
+@media (max-width: 1200px) {
+  .footer-columns {
+    grid-template-columns: repeat(3, 1fr); /* 3 colonnes tablette */
+    gap: 20px;
+  }
+}
+
+@media (max-width: 800px) {
+  .footer-columns {
+    grid-template-columns: repeat(2, 1fr); /* 2 colonnes mobile large */
+    gap: 20px;
+  }
+}
+
+@media (max-width: 500px) {
+  .footer-columns {
+    grid-template-columns: 1fr; /* 1 colonne mobile */
+    gap: 30px;
+    text-align: center;
+  }
+
+  .footer-col img {
+    margin: 0 auto; /* centre le logo */
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .btn.foot {
+    width: 100%;
+    justify-content: center;
+  }
+}
