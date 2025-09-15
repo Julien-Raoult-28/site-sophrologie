@@ -1,0 +1,28 @@
+:root {
+  --fond_clair: #f9f5f0;
+  --beige_clair: #ead7c4;
+  --beige_foncé: #a67c52;
+  --police_grise: #6d6d6d;
+  --vert: #d6d4c8;
+  --orange: #E1A66C;
+  --fond-clair2: #eee2d9;
+}
+@font-face {
+  font-family: 'PlayfairDisplay-Italic';
+  src: url('PlayfairDisplay-Italic.ttf') format('truetype');
+  /*font-weight: normal;
+  font-style: normal;*/
+}
+
+
+/*-------------------------------------------------------------------------*/
+
+.senior1-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 10px;
+  margin-top: 150px;
+  /*margin-left: 10px;*/
+  align-items: center; /* Centrage vertical */
+}
