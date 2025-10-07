@@ -233,6 +233,20 @@
   font-size: 1em; 
   color: var(--police_grise); 
 }
+/* Partie image = 1/5 */
+.seance3-image2 {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 20px;
+}
+.seance3-image2 img {
+  width: 100%;     /* prend toute la largeur du 1/5 */
+  height: auto;
+  max-width: 100%; /* tu peux ajuster selon la taille max que tu veux */
+  object-fit: cover;
+}
 
 /* Option : icône décorative (si tu veux remplacer le numéro par une icône) */
 /* .step-number { font-family: "Font Awesome 6 Free"; } */
