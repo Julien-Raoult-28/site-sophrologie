@@ -16,13 +16,459 @@
 
 
 /*-------------------------------------------------------------------------*/
-
-.senior1-container {
+.pk-container {
   display: flex;
   justify-content: center;
   align-items: flex-start;
   gap: 10px;
-  margin-top: 150px;
+  margin-top: 20px;
   /*margin-left: 10px;*/
   align-items: center; /* Centrage vertical */
 }
+.pk-text {
+  flex: 2;
+  margin-left: 50px;
+  /*padding: 10px;*/
+}
+.pk-texte1 {
+  font-size: 2em;
+  color: var(--beige_foncé);
+  font-family: 'PlayfairDisplay-Italic';
+  margin-bottom: 20px;
+}
+.pk-texte2 {
+  margin-bottom: 20px;
+  font-size: 1em;
+  color: var(--police_grise);
+  /*ont-family: 'PlayfairDisplay-Italic';*/
+}
+.pk-texte3 {
+  margin-bottom: 10px;
+  font-size: 1.5em;
+  color: var(--police_grise);
+}
+.pk-texte4 {
+  margin-bottom: 5px;
+  font-size: 1em;
+  color: var(--police_grise);
+  list-style: disc inside;
+}
+.pk-texte4 li::after {
+  content: "";
+  display: block;
+  width: 700px; /* largeur fixe de la ligne */
+  max-width: 100%;
+  height: 1px;
+  background: var(--beige_foncé);
+  margin: 1px auto 5px 0;
+  border-radius: 1px;
+}
+.pk-texte5 {
+  margin-bottom: 10px;
+  font-size: 1em;
+  color: var(--police_grise);
+}
+.pk-image1 {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px ;
+  margin-right: 10px ;
+}
+.pk-image1 img {
+  height:300px;
+  width: auto;
+  max-width: 100%;
+}
+/*-------------------------------------------------------------------------*/
+.seance-container {
+  display: flex;
+  background-color: var(--beige_clair) ;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 10px;
+  margin-top: 50px;
+  /*margin-left: 10px;*/
+  align-items: center; /* Centrage vertical */
+}
+.seance-text {
+  flex: 3;
+  margin-left: 200px;
+  margin-bottom: 40px;
+  margin-right: 100px;
+  display: flex;
+  flex-direction: column; /* pour garder la verticalité */
+  align-items: left;    /* centre horizontalement tous les enfants */
+}
+
+.seance-texte1 {
+  font-size: 1.5em;
+  color: var(--beige_foncé);
+}
+.seance-texte2 {
+  font-size: 1em;
+  color: var(--police_grise);
+}
+.seance-texte3 {
+  font-size: 1em;
+  color: var(--police_grise);
+  list-style: disc inside;
+  width: 100%;
+}
+.seance-texte3 li::after {
+  content: "";
+  display: block;
+  width: 1100px; /* largeur fixe de la ligne */
+  max-width: 100%;
+  height: 1px;
+  background: var(--beige_foncé);
+  margin: 0px auto 10px 0;
+  border-radius: 1px;
+}
+
+/*--------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------*/
+.pkbis-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 10px;
+  margin-top: 20px;
+  /*margin-left: 10px;*/
+  align-items: center; /* Centrage vertical */
+}
+.pkbis-text {
+  flex: 2;
+  margin-left: 50px;
+  /*padding: 10px;*/
+}
+.pkbis-texte2 {
+  margin-bottom: 20px;
+  font-size: 1em;
+  color: var(--police_grise);
+  /*ont-family: 'PlayfairDisplay-Italic';*/
+}
+.pkbis-texte3 {
+  margin-bottom: 10px;
+  font-size: 1.5em;
+  color: var(--police_grise);
+}
+.pkbis-texte4 {
+  margin-bottom: 5px;
+  font-size: 1em;
+  color: var(--police_grise);
+  list-style: disc inside;
+}
+.pkbis-texte4 li::after {
+  content: "";
+  display: block;
+  width: 400px; /* largeur fixe de la ligne */
+  max-width: 100%;
+  height: 1px;
+  background: var(--beige_foncé);
+  margin: 1px auto 5px 0;
+  border-radius: 1px;
+}
+
+.pkbis-image1 {
+  flex: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px ;
+  margin-right: 10px ;
+}
+.pkbis-image1 img {
+  height:auto;
+  width: auto;
+  max-width: 100%;
+}
+/*--------------------------------------------------------------------------*/
+.seance3-container {
+  display: flex;
+  background-color: var(--beige_clair) ;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 10px;
+  margin-top: 20px;
+  /*margin-left: 10px;*/
+  align-items: center; /* Centrage vertical */
+}
+.seance3-text { 
+  flex: 3; 
+  margin-left: 50px; 
+  margin-bottom: 20px;
+  display: flex; 
+  flex-direction: column; /* pour garder la verticalité */ 
+  align-items: left; /* centre horizontalement tous les enfants */ 
+} 
+.seance3-texte1 { 
+  font-size: 1.5em; 
+  color: var(--beige_foncé); 
+} 
+.seance3-texte2 { 
+  font-size: 1em; 
+  color: var(--police_grise); 
+}
+/* Conteneur des étapes */
+.seance3-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin-top: 18px;
+  margin-right: 50px;
+}
+
+/* Une étape (numéro + contenu) */
+.seance3-step {
+  display: flex;
+  gap: 18px;
+  align-items: flex-start;
+  background-color: #f4eee7;
+  border-radius: 12px;
+  padding: 14px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+  transition: transform 0.22s ease, box-shadow 0.22s ease;
+  border-left: 4px solid rgba(166,124,82,0.06); /* accent subtle */
+}
+
+/* Hover léger (desktop) */
+.seance3-step:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.09);
+}
+
+/* Rond du numéro */
+.step-number {
+  flex: 0 0 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #ead7c4, #a67c52);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.25rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  margin-top: 2px;
+}
+
+/* Corps du texte */
+.step-body {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Titre de l'étape */
+.step-title {
+  margin: 0;
+  font-size: 1.05rem;
+  color: var(--beige_foncé);
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+/* Texte explicatif */
+.step-text {
+  margin: 0;
+  color: var(--police_grise);
+  line-height: 1.5;
+  font-size: 0.98rem;
+}
+.seance3-texte3 { 
+  margin-top: 20px;
+  font-size: 1em; 
+  color: var(--police_grise); 
+}
+
+
+/* Option : icône décorative (si tu veux remplacer le numéro par une icône) */
+/* .step-number { font-family: "Font Awesome 6 Free"; } */
+
+
+
+/*--------------------------------------------------------------------------*/
+
+.final-container {
+  display: flex;
+  background-color: var(--fond_clair) ;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 10px;
+  /*margin-left: 10px;*/
+  align-items: center; /* Centrage vertical */
+}
+.final-text {
+  flex: 1;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column; /* pour garder la verticalité */
+  align-items: center; 
+  text-align: center;   /* centre horizontalement tous les enfants */
+}
+
+.final-texte1 {
+
+  font-size: 1em;
+  color: var(--police_grise);
+}
+
+/*---------------@MEDIA-------------------------------------------------------------------------------*/
+/* Media queries (<= 800px) — specific to your .pk-*, .seance-*, .seance3-*, .final-* rules */
+/* Place this at the END of your CSS file so it overrides the desktop rules above. */
+
+@media (max-width: 800px) {
+
+/* ---------- PK block (stacked) ---------- */
+.pk-container {
+flex-direction: column;
+gap: 14px;
+padding: 12px;
+align-items: stretch;
+}
+.pk-text {
+order: 1;
+margin-left: 0;
+padding: 0 8px;
+}
+.pk-image1 {
+order: 2;
+margin: 0 auto 8px;
+}
+.pk-image1 img {
+width: 95%;
+max-width: 560px;
+height: auto;
+display: block;
+}
+.pk-texte1 { font-size: 1.4rem; margin-bottom: 10px; }
+.pk-texte2,
+.pk-texte5 { font-size: 0.98rem; }
+
+/* shorten the decorative line so it fits better on mobile */
+.pk-texte4 li::after { width: 100%; }
+
+/* ---------- Seance (2ème) block ---------- */
+.seance-container {
+flex-direction: column;
+gap: 14px;
+padding: 12px;
+align-items: stretch;
+}
+.seance-text {
+order: 1;
+margin-left: 0;
+margin-right: 0;
+padding: 0 8px;
+}
+.seance-image2 {
+order: 2;
+margin: 0 auto;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.seance-image2 img {
+width: 95%;
+max-width: 560px;
+height: auto;
+display: block;
+}
+.seance-texte1 { font-size: 1.25rem; margin-bottom: 8px; }
+.seance-texte2,
+.seance-texte3 { font-size: 0.98rem; }
+
+/* ensure the decorative line in li fits mobile */
+.seance-texte3 li::after { width: 100%; }
+
+/* ---------- Seance3 (3ème) block ---------- */
+.seance3-container {
+flex-direction: column;
+gap: 14px;
+padding: 12px;
+align-items: stretch;
+}
+.seance3-text {
+order: 1;
+margin-left: 0;
+margin-bottom: 8px;
+padding: 0 8px;
+}
+.seance3-image2 {
+order: 2;
+margin: 0 auto;
+width: 100%;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.seance3-image2 img {
+width: 95%;
+max-width: 560px;
+height: auto;
+display: block;
+object-fit: cover;
+border-radius: 8px;
+}
+
+/* Steps: compact layout (number left, text right) */
+.seance3-steps { gap: 12px; margin-top: 12px; }
+.seance3-step {
+flex-direction: row;
+gap: 12px;
+align-items: flex-start;
+padding: 10px;
+border-left-width: 4px;
+background-color: #f4eee7;
+}
+.step-number {
+flex: 0 0 44px;
+height: 44px;
+font-size: 1rem;
+margin-top: 0;
+}
+.step-title { font-size: 1rem; }
+.step-text { font-size: 0.95rem; line-height: 1.45; }
+
+/* ---------- Final block ---------- */
+.final-container {
+flex-direction: column;
+gap: 12px;
+padding: 12px;
+align-items: stretch;
+}
+.final-text {
+margin-top: 0;
+padding: 0 8px;
+text-align: center;
+}
+.final-texte1 { font-size: 1rem; }
+
+/* ---------- Small helpers ---------- */
+/* Ensure images never overflow on tiny screens */
+.pk-image1 img,
+.seance-image2 img,
+.seance3-image2 img {
+max-width: 100%;
+height: auto;
+}
+
+/* reduce heavy shadows on mobile for performance & clarity */
+.seance3-step,
+.pk-image1 img,
+.seance-image2 img {
+box-shadow: 0 4px 10px rgba(0,0,0,0.04);
+}
+
+/* very small screens adjustments */
+@media (max-width: 420px) {
+.pk-texte1 { font-size: 1.2rem; }
+.seance-texte1,
+.seance3-texte1 { font-size: 1.05rem; }
+.step-number { flex: 0 0 40px; height: 40px; font-size: 0.95rem; }
+}
+
+}
+
