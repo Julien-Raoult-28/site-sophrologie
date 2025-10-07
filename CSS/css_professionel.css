@@ -12,134 +12,375 @@
   /*font-weight: normal;
   font-style: normal;*/
 }
-/*-------------------------------------------------------------------------------------------*/
-.sophro-container {
+/*-------------------------------------------------------------------------*/
+.pk-container {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  gap: 40px;
-  margin-top: 30px;
-  margin-left: 30px;
+  gap: 10px;
+  margin-top: 20px;
+  /*margin-left: 10px;*/
   align-items: center; /* Centrage vertical */
 }
-.sophro-text {
-  flex: 0,8;
-  padding: 50px;
+.pk-text {
+  flex: 2;
+  margin-left: 50px;
+  /*padding: 10px;*/
 }
-.sophro-texte1 {
-  font-size: 2.5em;
+.pk-texte1 {
+  font-size: 2em;
+  color: var(--beige_foncé);
+  font-family: 'PlayfairDisplay-Italic';
+  margin-bottom: 20px;
+}
+.pk-texte2 {
+  margin-bottom: 20px;
+  font-size: 1em;
+  color: var(--police_grise);
+  /*ont-family: 'PlayfairDisplay-Italic';*/
+}
+.pk-texte3 {
+  margin-bottom: 10px;
+  font-size: 1.5em;
   color: var(--beige_foncé);
   font-family: 'PlayfairDisplay-Italic';
 }
-.sophro-texte3 {
-  font-size: 1.1em;
+.pk-texte4 {
+  margin-bottom: 5px;
+  font-size: 1em;
   color: var(--police_grise);
   list-style: disc inside;
 }
-.sophro-texte3 li::after {
+.pk-texte4 li::after {
   content: "";
   display: block;
-  width: 700px; /* largeur fixe de la ligne */
+  width: 970px; /* largeur fixe de la ligne */
   max-width: 100%;
-  height: 2px;
+  height: 1px;
   background: var(--beige_foncé);
-  margin: 10px auto 20px 0;
+  margin: 1px auto 5px 0;
   border-radius: 1px;
 }
-.sophro-image {
-  flex: 1,2;
+.pk-texte5 {
+  margin-bottom: 10px;
+  font-size: 1em;
+  color: var(--police_grise);
+}
+.pk-image1 {
+  flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 20px ;
-  margin-right: 100px ;
+  margin-right: 10px ;
 }
-.sophro-image img {
-  height:120%;
+.pk-image1 img {
+  height:300px;
   width: auto;
-  max-width: 120%;
+  max-width: 100%;
 }
-/*--------------------------------------------------------------------------*/
-.ephad_web_image {
-  background-color: var(--beige_clair);
-  padding:100px;
+/*-------------------------------------------------------------------------*/
+.seance-container {
   display: flex;
+  background-color: var(--beige_clair) ;
   justify-content: center;
-  align-items: center;
-  margin-top: 20px ;
+  align-items: flex-start;
+  gap: 10px;
+  margin-top: 50px;
+  /*margin-left: 10px;*/
+  align-items: center; /* Centrage vertical */
 }
-.ephad_web_image img {
-  height:auto;
-  width: auto;
-  max-width: 80%;
-}
-/*--------------------------------------------------------------------------*/
-.plage_assis {
+.seance-text {
+  flex: 3;
+  margin-left: 50px;
+  margin-bottom: 40px;
   display: flex;
-  justify-content: center; 
-  align-items: center;      
+  flex-direction: column; /* pour garder la verticalité */
+  align-items: left;    /* centre horizontalement tous les enfants */
 }
 
-.plage_assis img {
-  max-width: 50%;   
-  height: auto;     
-  width: auto;       
-  max-height: 80vh; 
+.seance-texte1 {
+  font-size: 1.5em;
+  color: var(--beige_foncé);
 }
+.seance-texte2 {
+  font-size: 1em;
+  color: var(--police_grise);
+}
+.seance-texte3 {
+  font-size: 1em;
+  color: var(--police_grise);
+  list-style: disc inside;
+  width: 45%;
+}
+.seance-texte3 li::after {
+  content: "";
+  display: block;
+  width: 100%; /* largeur fixe de la ligne */
+  max-width: 100%;
+  height: 1px;
+  background: var(--beige_foncé);
+  margin: 0px auto 10px 0;
+  border-radius: 1px;
+}
+.seance-image2 {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px ;
+  margin-right: 10px ;
+}
+.seance-image2 img {
+  height:auto;
+  width: 200px;
+  max-width: 100%;
+}
+/*--------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------*/
+.seance3-container {
+  display: flex;
+  background-color: var(--fond_clair) ;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 10px;
+  margin-top: 20px;
+  /*margin-left: 10px;*/
+  align-items: center; /* Centrage vertical */
+}
+.seance3-text { 
+  flex: 3; 
+  margin-left: 50px; 
+  display: flex; 
+  flex-direction: column; /* pour garder la verticalité */ 
+  align-items: left; /* centre horizontalement tous les enfants */ 
+} 
+.seance3-texte1 { 
+  font-size: 1.5em; 
+  color: var(--beige_foncé); 
+} 
+.seance3-texte2 { 
+  font-size: 1em; 
+  color: var(--police_grise); 
+}
+/* Conteneur des étapes */
+.seance3-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin-top: 18px;
+}
+
+/* Une étape (numéro + contenu) */
+.seance3-step {
+  display: flex;
+  gap: 18px;
+  align-items: flex-start;
+  background-color: #f4eee7;
+  border-radius: 12px;
+  padding: 14px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+  transition: transform 0.22s ease, box-shadow 0.22s ease;
+  border-left: 4px solid rgba(166,124,82,0.06); /* accent subtle */
+}
+
+/* Hover léger (desktop) */
+.seance3-step:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.09);
+}
+
+/* Rond du numéro */
+.step-number {
+  flex: 0 0 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #ead7c4, #a67c52);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.25rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  margin-top: 2px;
+}
+
+/* Corps du texte */
+.step-body {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Titre de l'étape */
+.step-title {
+  margin: 0;
+  font-size: 1.05rem;
+  color: var(--beige_foncé);
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+/* Texte explicatif */
+.step-text {
+  margin: 0;
+  color: var(--police_grise);
+  line-height: 1.5;
+  font-size: 0.98rem;
+}
+.seance3-texte3 { 
+  margin-top: 20px;
+  font-size: 1em; 
+  color: var(--police_grise); 
+}
+
+/* Option : icône décorative (si tu veux remplacer le numéro par une icône) */
+/* .step-number { font-family: "Font Awesome 6 Free"; } */
+
+
+
+/*--------------------------------------------------------------------------*/
+
+.final-container {
+  display: flex;
+  background-color: var(--beige_clair) ;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 10px;
+  margin-top: 50px;
+  /*margin-left: 10px;*/
+  align-items: center; /* Centrage vertical */
+}
+.final-text {
+  flex: 3;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column; /* pour garder la verticalité */
+  align-items: center;    /* centre horizontalement tous les enfants */
+}
+
+.final-texte1 {
+  font-size: 1.5em;
+  color: var(--police_grise);
+}
+
 
 /*---------------@MEDIA-------------------------------------------------------------------------------*/
 
+/* ---------- Responsive media queries for the provided sections ----------
+Apply this at the END of your CSS file so it overrides earlier rules.
+Targets only: .pk-*, .seance-*, .seance3-*, .final-* (mobile-first). */
+
+/* ------------------ MOBILE (<= 800px) ------------------ */
 @media (max-width: 800px) {
-  /* Conteneur principal */
-  .sophro-container {
-    flex-direction: column;
-    gap: 20px;
-    margin: 20px auto;
-    align-items: center;
-  }
-
-  /* Texte */
-  .sophro-text {
-    padding: 20px;
-    text-align: center;
-  }
-
-  .sophro-texte1 {
-    font-size: 1.8em;
-  }
-
-  .sophro-texte3 {
-    font-size: 1em;
-  }
-
-  .sophro-texte3 li::after {
-    width: 100%;
-  }
-
-  /* Image principale */
-  .sophro-image {
-    margin: 0;
-    justify-content: center;
-  }
-
-  .sophro-image img {
-    max-width: 90%;
-    height: auto;
-  }
-
-  /* Image EHPAD */
-  .ephad_web_image {
-    padding: 20px;
-  }
-
-  .ephad_web_image img {
-    max-width: 90%;
-    height: auto;
-  }
-
-  /* Image plage */
-  .plage_assis img {
-    max-width: 90%;
-    height: auto;
-  }
+/* PK block: stack, images full width */
+.pk-container {
+flex-direction: column;
+gap: 16px;
+padding: 12px;
+align-items: stretch;
 }
+.pk-text {
+margin-left: 0;
+padding: 0 6px;
+order: 1;
+}
+.pk-image1 {
+order: 2;
+margin: 0 auto;
+}
+.pk-image1 img {
+width: 95%;
+height: auto;
+max-width: 560px;
+}
+.pk-texte1 { font-size: 1.4rem; text-align: left; }
+.pk-texte2,
+.pk-texte5 { font-size: 0.98rem; }
+
+/* Seance (2ème) block: stack, image under text */
+.seance-container {
+flex-direction: column;
+gap: 16px;
+padding: 12px;
+align-items: stretch;
+}
+.seance-text {
+margin-left: 0;
+padding: 0 6px;
+order: 1;
+}
+.seance-texte3 {
+width: 100%;
+}
+.seance-image2 {
+order: 2;
+margin: 0 auto;
+}
+.seance-image2 img {
+width: 95%;
+height: auto;
+max-width: 560px;
+}
+.seance-texte1 { font-size: 1.25rem; }
+.seance-texte2,
+.seance-texte3 { font-size: 0.98rem; }
+
+/* Seance3 (3ème) block: steps compact, image under text */
+.seance3-container {
+flex-direction: column;
+gap: 16px;
+padding: 12px;
+align-items: stretch;
+}
+.seance3-text {
+margin-left: 0;
+padding: 0 6px;
+order: 1;
+}
+.seance3-image2 {
+order: 2;
+margin: 0 auto;
+}
+.seance3-image2 img {
+width: 95%;
+height: auto;
+max-width: 560px;
+}
+
+.seance3-steps { gap: 12px; margin-top: 12px; }
+.seance3-step {
+flex-direction: row; /* number left, text right */
+gap: 12px;
+align-items: flex-start;
+padding: 10px;
+}
+.step-number {
+flex: 0 0 44px;
+height: 44px;
+font-size: 1rem;
+margin-top: 0;
+}
+.step-title { font-size: 1rem; }
+.step-text { font-size: 0.95rem; line-height: 1.45; }
+
+/* Final block */
+.final-container {
+flex-direction: column;
+gap: 12px;
+padding: 12px;
+align-items: stretch;
+}
+.final-text { margin-top: 0; padding: 0 6px; }
+.final-texte1 { font-size: 1.1rem; text-align: left; }
+
+/* Minor performance tweak: soften shadows on mobile */
+.seance3-step,
+.pk-image1 img,
+.seance-image2 img {
+box-shadow: 0 4px 10px rgba(0,0,0,0.04);
+}
+}
+
+

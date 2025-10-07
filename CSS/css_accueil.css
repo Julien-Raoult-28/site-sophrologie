@@ -83,36 +83,38 @@
   text-align: right;
   margin-top: 30px;
 }
+/* supprimez toute hauteur fixe qui force le conteneur à déformer les images */
 .accueil_2_fond {
-  width: 100vw;
-  height: 850px;
-  background: var(--beige_clair);
-  margin: 5px 0 0 0;
-  left: 50%;
-  right: 50%;
-  position: relative;
-  transform: translateX(-50vw);
-  padding: 10px 0;
+  height: auto;    /* laisser le contenu définir la hauteur */
+  padding: 20px 0;
+  background-color: var(--beige_clair);
 }
 .accueil_2_images {
   display: flex;
   justify-content: center;
-  align-items: center;
-  gap: 0px;
-  height: 60%;
-  margin-top: 120px;
+  align-items: flex-start; /* aligne les cartes en haut si texte plus long */
+  gap: 96px;               /* espace entre les colonnes */
+  margin-top: 20px;        /* ajuste selon besoin */
+  padding: 20px;
+  flex-wrap: wrap;         /* permet le passage en colonne sur petit écran */
 }
+/* texte / cartes : s'alignent correctement à côté des images */
 .accueil_2_item {
   display: flex;
   flex-direction: column;
   align-items: center;
+  max-width: 420px;
 }
+/* images conservent toutes le même ratio et la même taille max */
 .accueil_2_item img {
-  width: 80%; /* Ajuste la taille selon tes besoins */
-  height: 50%;
-  object-fit: cover;
+  width: clamp(220px, 24vw, 360px); /* min 220px, max 360px, élastique entre */
+  aspect-ratio: 4 / 3;              /* garantit le même format pour toutes */
+  object-fit: cover;                /* recadre proprement sans déformer */
+  object-position: center;          /* centre le recadrage */
+  display: block;                   /* évite espaces blancs indésirables */
   border-radius: 12px;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.05);
 }
 .accueil_2_carre_texte,
 .accueil_2_carre_texte2 {
@@ -185,25 +187,24 @@
     flex-direction: column;
     gap: 40px;
     margin-top: 30px;
+    padding: 0 16px;
   }
 
   .accueil_2_item img {
-    width: 90%;
+    width: 100%;
+    max-width: 560px;
+    aspect-ratio: auto; /* laisse l'image s'adapter naturellement sur mobile */
     height: auto;
   }
 
   .accueil_2_carre_texte,
   .accueil_2_carre_texte2 {
-    width: 90vw;
-    height: auto;
-    min-width: unset;
-    min-height: unset;
-    padding: 20px 10px;
-    font-size: 0.95em;
+    width: 100%;
   }
+}
 
   .accueil_2_fond {
     height: auto;
     padding-bottom: 40px;
   }
-}
+
