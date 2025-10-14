@@ -59,9 +59,25 @@ body {
   pointer-events: none;
 }
 
+/* === DEBUG CADRES ROUGES === 
+
+.header-top { outline: 2px solid red; }
+.header-main { outline: 2px solid blue; }
+.header-contact { outline: 2px solid green; }
+.social-icons { outline: 2px solid orange; }
+.header-main-wrapper { outline: 2px solid purple; }
+.main-nav { outline: 2px solid brown; }
+.main-nav > ul { outline: 2px solid pink; }
+.h1-bar > h1 { outline: 2px solid yellow; }
+.seo-h1 { outline: 2px solid black; }
+.social-icons a { outline: 2px solid cyan; }
+.logo { outline: 2px solid magenta; }
+*/
+
+
 .header-contact {
   display: flex;
-  align-items: center;
+  align-items: stretch;
   justify-content: flex-end;
   max-width: 1700px;
   margin: 0 20px;
@@ -79,6 +95,24 @@ body {
 .header-contact i {
   margin-right: 6px;
 }
+/* ===== SOCIAL ICONS ===== */
+.social-icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  gap: 10px;
+}
+
+.social-icons a {
+  color: var(--beige_foncé);
+  font-size: 30px;
+  transition: color 0.2s;
+}
+
+.social-icons a:hover {
+  color: var(--police_grise);
+}
 .google-review-img {
   width: 50px;      /* largeur personnalisée */
   height: auto;
@@ -87,16 +121,15 @@ body {
 .btn-reserver {
   background: var(--beige_foncé);
   color: #fff;
-  padding: 10px 20px;
+  padding: 6px 10px;
   border-radius: 8px;
   text-decoration: none;
-  font-size: 15px;
-  margin-left: 30px;
+  font-size: 1em;
   transition: background 0.2s;
 }
 
 .btn-reserver:hover {
-  background: var(--beige_foncé);
+  background: var(--police_grise);
 }
 
 .header-main {
@@ -226,24 +259,7 @@ body {
   font-size: 0.8em;
 }
 
-/* ===== SOCIAL ICONS ===== */
-.social-icons {
-  position: relative;
-  align-items: right;
-  display: flex;
-  flex: 1;
-  gap: 20px;
-}
 
-.social-icons a {
-  color: var(--beige_foncé);
-  font-size: 28px;
-  transition: color 0.2s;
-}
-
-.social-icons a:hover {
-  color: var(--beige_foncé);
-}
 
 
 
@@ -360,6 +376,8 @@ body {
 .modal .close:hover {
   color: #007b8a;
 }
+
+
 
 
 
