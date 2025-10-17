@@ -55,7 +55,6 @@
         <a href="h2s/seance_senior.html">Séance senior / handicap</a>
       </div>
     </div>
-    <a href="#" class="mobile-link open-cal" data-cal="cathy-coquelet-harmonie-de-soie"><i class="fa-solid fa-calendar-days"></i> PRENDRE RDV</a>
     <div class="mobile-social-icons">
       <a href="h2s/avis_google.html"><img src="IMAGE/img_picto_avis_google_2.png" alt="Avis Google"></a>
       <a href="https://www.facebook.com/profile.php?id=61580660420732" target="_blank"><i class="fa-brands fa-facebook"></i></a>
@@ -74,12 +73,9 @@
         <a href="https://www.instagram.com/harmonie_de_soie/" target="_blank"><i class="fa-brands fa-square-instagram"></i></a>
         <a href="h2s/avis_google.html"><i class="fa-brands fa-square-google-plus"></i></a>
       </div>
-      <a href="#" class="open-cal" data-cal="cathy-coquelet-harmonie-de-soie">Prendre RDV</a>
     </div>
   </div>
 </header>
-
-<!-- HEADER MAIN -->
 <header class="header-main">
   <div class="header-main-wrapper">
     <nav class="main-nav">
@@ -94,7 +90,6 @@
             <li><a href="h2s/seance_senior.html">Séance senior / handicap</a></li>
           </ul>
         </li>
-        <li><a href="#" class="open-cal" data-cal="cathy-coquelet-harmonie-de-soie"><i class="fa-solid fa-calendar-days"></i>PRENDRE RDV</a></li>
       </ul>
     </nav>
   </div>
@@ -197,7 +192,6 @@
     </div>
   </div>
   <div class="footer-bottom">
-    <a href="#" class="btn foot open-cal" data-cal="cathy-coquelet-harmonie-de-soie">Prendre RDV en ligne</a>
     <a href="#" class="btn foot" id="contactBtn">Contactez-moi</a>
   </div>
 </footer>
@@ -215,6 +209,7 @@
 
 <!-- SCRIPTS -->
 
+<!-- SCRIPTS pour menu mobile et modal -->
 <script>
 document.addEventListener("DOMContentLoaded", function () {
   // MOBILE MENU
@@ -247,28 +242,76 @@ document.addEventListener("DOMContentLoaded", function () {
   btn.onclick = function(event){ event.preventDefault(); modal.style.display="block"; }
   span.onclick = function(){ modal.style.display="none"; }
   window.onclick = function(event){ if(event.target==modal) modal.style.display="none"; }
-
-  // CAL.COM SCRIPT
-  const calScript = document.createElement('script');
-  calScript.src = "https://cdn.cal.com/embed.js";
-  calScript.onload = function() {
-    if(typeof Cal==="function"){ try{ Cal("init",{origin:"https://cal.com",namespace:"cal"}); } catch(e){console.warn(e);} }
-    document.querySelectorAll(".open-cal").forEach(el=>{
-      el.style.cursor="pointer";
-      el.addEventListener("click", function(ev){
-        ev.preventDefault();
-        const calLink = el.dataset.cal || "cathy-coquelet-harmonie-de-soie";
-        const config = {theme:"light",primaryColor:"#b48b7d"};
-        if(typeof Cal==="function"){ 
-          try{ Cal("show",{calLink,config}); } 
-          catch(e){ console.warn(e); window.open("https://cal.com/"+calLink,"_blank","noopener"); }
-        }
-      });
-    });
-  };
-  document.body.appendChild(calScript);
 });
 </script>
+
+<!-- Cal floating-popup embed code begins -->
+<script type="text/javascript">
+(function (C, A, L) { 
+  let p = function (a, ar) { 
+    a.q.push(ar); 
+  }; 
+
+  let d = C.document; 
+  C.Cal = C.Cal || function () { 
+    let cal = C.Cal; 
+    let ar = arguments; 
+
+    if (!cal.loaded) { 
+      cal.ns = {}; 
+      cal.q = cal.q || []; 
+      d.head.appendChild(d.createElement("script")).src = A; 
+      cal.loaded = true; 
+    } 
+
+    if (ar[0] === L) { 
+      const api = function () { 
+        p(api, arguments); 
+      }; 
+      const namespace = ar[1]; 
+      api.q = api.q || []; 
+
+      if (typeof namespace === "string") {
+        cal.ns[namespace] = cal.ns[namespace] || api; 
+        p(cal.ns[namespace], ar); 
+        p(cal, ["initNamespace", namespace]);
+      } else {
+        p(cal, ar); 
+      } 
+
+      return;
+    } 
+
+    p(cal, ar); 
+  }; 
+})(window, "https://app.cal.com/embed/embed.js", "init");
+
+// Initialisation du calendrier
+Cal("init", { origin: "https://app.cal.com" });
+
+// Bouton flottant Cal.com
+Cal("floatingButton", {
+  calLink: "cathy-coquelet-harmonie-de-soie/seance-decouverte-sophrologie-enfant-presentiel",
+  config: {
+    layout: "month_view"
+  },
+  buttonColor: "#a67c52",
+  buttonTextColor: "#ffffff",
+  buttonText: "Prendre RDV"
+});
+
+// UI du calendrier
+Cal("ui", {
+  cssVarsPerTheme: {
+    light: { "cal-brand": "#347941" },
+    dark: { "cal-brand": "#fafafa" }
+  },
+  hideEventTypeDetails: false,
+  layout: "month_view"
+});
+</script>
+
+  <!-- Cal floating-popup embed code ends -->
 
 </body>
 </html>

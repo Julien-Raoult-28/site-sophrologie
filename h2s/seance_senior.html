@@ -76,19 +76,14 @@
 </nav>
 <!----------------------WEB-------------------------------------->
     <div class="header-contact">
-      <div class="header-contact-content">
-        <span ><i class="fa-solid fa-house"></i>60126-Longueil-Sainte-Marie</span>
-        <span ><i class="fa fa-phone"></i> 06 49 29 91 11</span>
-        <span ><i class="fa fa-envelope"></i> cathy.coquelet880@gmail.com</span>
-        <div class="social-icons">
-          <a href="avis_google.html"  class="google-review-link">
-            <img src="../IMAGE/img_picto_avis_google_2.png" alt="Avis Google" class="google-review-img">
-           </a>
-          <a href="https://www.facebook.com/profile.php?id=61580660420732" target="_blank"><i class="fa-brands fa-facebook"></i></a>
-          <a href="https://www.instagram.com/harmonie_de_soie/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-        </div>
-        
-        <a href="rdv.html" class="btn-reserver">Prendre RDV</a>
+    <div class="header-contact-content">
+      <span><i class="fa-solid fa-house"></i>60126-Longueil-Sainte-Marie</span>
+      <span><i class="fa fa-phone"></i> 06 49 29 91 11</span>
+      <span><i class="fa fa-envelope"></i> cathy.coquelet880@gmail.com</span>
+      <div class="social-icons">
+        <a href="https://www.facebook.com/profile.php?id=61580660420732" target="_blank"><i class="fa-brands fa-square-facebook"></i></a>
+        <a href="https://www.instagram.com/harmonie_de_soie/" target="_blank"><i class="fa-brands fa-square-instagram"></i></a>
+        <a href="h2s/avis_google.html"><i class="fa-brands fa-square-google-plus"></i></a>
       </div>
     </div>
   </header>
@@ -108,7 +103,6 @@
                 <li><a href="seance_senior.html">Séance senior / handicap</a></li>
               </ul>
             </li>
-            <li><a href="rdv.html"><i class="fa-solid fa-calendar-days"></i>PRENDRE RDV</a></li>
             <!--<li class="dropdown">
               <a href="#">AUTRES PAGES <i class="fa fa-caret-down"></i></a>
             </li>-->
@@ -377,6 +371,73 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 </script>
+<!-- Cal floating-popup embed code begins -->
+<script type="text/javascript">
+(function (C, A, L) { 
+  let p = function (a, ar) { 
+    a.q.push(ar); 
+  }; 
+
+  let d = C.document; 
+  C.Cal = C.Cal || function () { 
+    let cal = C.Cal; 
+    let ar = arguments; 
+
+    if (!cal.loaded) { 
+      cal.ns = {}; 
+      cal.q = cal.q || []; 
+      d.head.appendChild(d.createElement("script")).src = A; 
+      cal.loaded = true; 
+    } 
+
+    if (ar[0] === L) { 
+      const api = function () { 
+        p(api, arguments); 
+      }; 
+      const namespace = ar[1]; 
+      api.q = api.q || []; 
+
+      if (typeof namespace === "string") {
+        cal.ns[namespace] = cal.ns[namespace] || api; 
+        p(cal.ns[namespace], ar); 
+        p(cal, ["initNamespace", namespace]);
+      } else {
+        p(cal, ar); 
+      } 
+
+      return;
+    } 
+
+    p(cal, ar); 
+  }; 
+})(window, "https://app.cal.com/embed/embed.js", "init");
+
+// Initialisation du calendrier
+Cal("init", { origin: "https://app.cal.com" });
+
+// Bouton flottant Cal.com
+Cal("floatingButton", {
+  calLink: "cathy-coquelet-harmonie-de-soie/seance-decouverte-sophrologie-enfant-presentiel",
+  config: {
+    layout: "month_view"
+  },
+  buttonColor: "#a67c52",
+  buttonTextColor: "#ffffff",
+  buttonText: "Prendre RDV"
+});
+
+// UI du calendrier
+Cal("ui", {
+  cssVarsPerTheme: {
+    light: { "cal-brand": "#347941" },
+    dark: { "cal-brand": "#fafafa" }
+  },
+  hideEventTypeDetails: false,
+  layout: "month_view"
+});
+</script>
+
+  <!-- Cal floating-popup embed code ends -->
  <!------------------------------------------------------------->
   </body>
 </html>
