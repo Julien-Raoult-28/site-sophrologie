@@ -119,23 +119,49 @@
     <div class="h1-bar">
   <h1>Harmonie de Soie – Cathy Coquelet – Sophrologue à proximité de Compiègne (Longueil-Sainte-Marie)</h1>
 </div>
-    <main>
-      <div class="titre-rdv">
-        <h2 >Réservez votre séance en ligne</h2><!--cal_live_2092aade1a8d1aa4bdb78a7d0c2e910e   npm install @calcom/atoms-->
-      </div>
-      <div class="annulation-rdv">
-        <h2 >Pour toutes annulations ou modification, merci d'envoyer un sms ou email aux coordonnées suivantes : 06 49 29 91 11 ou cathy.coquelet880@gmail.com</h2>
-      </div>
-      <div style="max-width:900px;margin:0 auto;">
-        <iframe
-          src="https://cal.com/cathy-coquelet-harmonie-de-soie/"
-          style="width:100%;height:1000px;border:0;"
-          allow="camera;microphone"
-          loading="lazy"
-          ></iframe>
-      </div>
+<!--
+<main class="rdv-section">
+  <div class="titre-rdv">
+    <h2>Réservez votre séance en ligne</h2>
+  </div>
+  <div class="cal-wrapper">
+    <iframe
+      src="https://cal.com/cathy-coquelet-harmonie-de-soie/?hide_gdpr_banner=1"
+      class="cal-frame"
+      allow="camera;microphone"
+      loading="lazy"
+    ></iframe>
+  </div>
+</main>
+-->
+<main class="rdv-section">
+  <div class="titre-rdv">
+    <h2>Réservez votre séance en ligne</h2>
+  </div>
 
-    </main>
+  <div id="cal-embed" class="cal-container"></div>
+</main>
+
+<!-- Script officiel Cal.com -->
+<script src="https://embed.cal.com/embed.js" async></script>
+<script>
+  window.addEventListener("DOMContentLoaded", function () {
+    Cal("init", {
+      origin: "https://cal.com",
+      namespace: "cal",
+    });
+    Cal("inline", {
+      elementOrSelector: "#cal-embed",
+      calLink: "cathy-coquelet-harmonie-de-soie", // ton lien Cal.com
+      config: {
+        theme: "light",            // ou "dark"
+        primaryColor: "#b48b7d",   // ta couleur principale (ex: beige rosé)
+        hideEventTypeDetails: false,
+        layout: "month_view",      // ou "week_view"
+      },
+    });
+  });
+</script>
   <!----------------------FOOTER-------------------------------------------------------------------------------------------------------------------------> 
 <footer class="site-footer">
   <hr>
