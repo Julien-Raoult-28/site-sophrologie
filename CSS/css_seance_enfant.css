@@ -89,14 +89,21 @@
   color: var(--police_grise);
   list-style: disc inside;
 }
+.A3-6-texte4 {
+  display: table; /* crée une largeur commune basée sur le plus grand élément */
+}
+
+.A3-6-texte4 li {
+  display: table-row; /* chaque <li> agit comme une ligne */
+}
+
 .A3-6-texte4 li::after {
   content: "";
   display: block;
-  width: 750px; /* largeur fixe de la ligne */
-  max-width: 100%;
+  width: 100%; /* prend la largeur de la table */
   height: 1px;
   background: var(--beige_foncé);
-  margin: 1px auto 5px 0;
+  margin: 2px 0 5px 0;
   border-radius: 1px;
 }
 .A3-6-image1 {
@@ -175,14 +182,21 @@
   color: var(--police_grise);
   list-style: disc inside;
 }
+.A6-9-texte4 {
+  display: table; /* crée une largeur commune basée sur le plus grand élément */
+}
+
+.A6-9-texte4 li {
+  display: table-row; /* chaque <li> agit comme une ligne */
+}
+
 .A6-9-texte4 li::after {
   content: "";
   display: block;
-  width: 750px; /* largeur fixe de la ligne */
-  max-width: 100%;
+  width: 100%; /* prend la largeur de la table */
   height: 1px;
   background: var(--beige_foncé);
-  margin: 1px auto 5px 0;
+  margin: 2px 0 5px 0;
   border-radius: 1px;
 }
 .A6-9-image1 {
@@ -245,14 +259,21 @@
   color: var(--police_grise);
   list-style: disc inside;
 }
+.A9-12-texte4 {
+  display: table; /* crée une largeur commune basée sur le plus grand élément */
+}
+
+.A9-12-texte4 li {
+  display: table-row; /* chaque <li> agit comme une ligne */
+}
+
 .A9-12-texte4 li::after {
   content: "";
   display: block;
-  width: 750px; /* largeur fixe de la ligne */
-  max-width: 100%;
+  width: 100%; /* prend la largeur de la table */
   height: 1px;
   background: var(--beige_foncé);
-  margin: 1px auto 5px 0;
+  margin: 2px 0 5px 0;
   border-radius: 1px;
 }
 .A9-12-image1 {
