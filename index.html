@@ -100,6 +100,14 @@
 </div>
 
 <main>
+  <!-- 📌 Vidéo de présentation -->
+<!--<div class="accueil_video">
+  <video controls muted playsinline class="video_cathy">
+    <source src="IMAGE/video_cathy.mp4" type="video/mp4">
+    Votre navigateur ne prend pas en charge la lecture vidéo.
+  </video>
+</div>
+-->
   <!-- 1er bloc -->
   <div class="accueil_presentation">
     <a href="index.html"><img src="IMAGE/img_accueil_1.png" alt="Cathy Coquelet sophrologue Chevrières Compiègne" class="photo_accueil_1"></a>
@@ -210,31 +218,47 @@
  <!-- Bas du footer -->
   <div class="footer-bottom">
     <a href="#" class="btn foot" id="contactBtn">Contactez-moi <i class="fa-regular fa-envelope"></i></a>
+    <a href="#" class="btn foot" id="tarifsBtn">Tarifs 2026 <i class="fa-solid fa-euro-sign"></i></a>
     <!-- Modal -->
 <div id="contactModal" class="modal">
   <div class="modal-content">
     <span class="close">&times;</span>
     <h3>Mes coordonnées :</h3>
-    <p><strong><i class="fa-solid fa-envelope"></i> Email : </strong>cathy.coquelet880@gmail.com</p>
+    <p><strong><i class="fa-solid fa-envelope"></i> Email :</strong>cathy.coquelet880@gmail.com</p>
     <p><strong><i class="fa-solid fa-phone"></i> Téléphone : </strong>06 49 29 91 11</p>
     <p><strong><i class="fa-solid fa-location-dot"></i> Adresse : </strong>118 rue de la Gare, 60710 Chevrières</p>
   </div>
 </div>
-
-  </div>
-</footer>
-
-<!-- MODAL CONTACT -->
-<div id="contactModal" class="modal">
+<!-- MODAL TARIFS 2026 -->
+<div id="tarifsModal" class="modal" aria-hidden="true" role="dialog" aria-labelledby="tarifsTitle">
   <div class="modal-content">
-    <span class="close">&times;</span>
-    <h3>Mes coordonnées :</h3>
-    <p>Email : cathy.coquelet880@gmail.com</p>
-    <p>Téléphone : 06 49 29 91 11</p>
-    <p>Adresse : 118 rue de la Gare, 60710 Chevrières</p>
+    <span class="close" aria-label="Fermer">&times;</span>
+    <h3 id="tarifsTitle">Tarifs 2026</h3>
+
+    <h4>Sophrologie :</h4>
+    <ul>
+      <li>Adulte : 60 €</li>
+      <li>Adolescent (13 à 17 ans) : 50 €</li>
+      <li>Enfant (3 à 12 ans) : 45 €</li>
+    </ul>
+
+    <h4>Relaxation ludique (pour personnes âgées ou en situation de handicap) :</h4>
+    <ul>
+      <li>Au cabinet médical de Chevrières : 60 €</li>
+      <li>À domicile (20 km autour de Longueil-Sainte-Marie) : 65 €</li>
+    </ul>
+
+    <h4>Séances en entreprise et en groupe :</h4>
+    <ul>
+    <li>Pour un devis personnalisé, merci de me contacter.</li>
+    </ul>
   </div>
 </div>
 
+  </div>
+
+</footer>
+<!------------------------- FOOTER FIN -------------------------------------------------------------------------->
 <!-- SCRIPTS -->
 
 <!-- SCRIPTS pour menu mobile et modal -->
@@ -262,14 +286,51 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  // MODAL CONTACT
-  const modal = document.getElementById("contactModal");
-  const btn = document.getElementById("contactBtn");
-  const span = modal.querySelector(".close");
+   // MODAL CONTACT (déjà présent) - on suppose que tu gardes ton code existant
+  const modalContact = document.getElementById("contactModal");
+  const btnContact = document.getElementById("contactBtn");
+  if (btnContact && modalContact) {
+    const spanContact = modalContact.querySelector(".close");
+    btnContact.onclick = function(event){ event.preventDefault(); modalContact.style.display="block"; modalContact.setAttribute('aria-hidden','false'); }
+    if (spanContact) spanContact.onclick = function(){ modalContact.style.display="none"; modalContact.setAttribute('aria-hidden','true'); }
+    window.addEventListener('click', function(event){ if(event.target==modalContact){ modalContact.style.display="none"; modalContact.setAttribute('aria-hidden','true'); }});
+  }
 
-  btn.onclick = function(event){ event.preventDefault(); modal.style.display="block"; }
-  span.onclick = function(){ modal.style.display="none"; }
-  window.onclick = function(event){ if(event.target==modal) modal.style.display="none"; }
+  // --- NOUVEAU : MODAL TARIFS 2026 ---
+  const modalTarifs = document.getElementById("tarifsModal");
+  const btnTarifs = document.getElementById("tarifsBtn");
+  if (btnTarifs && modalTarifs) {
+    const spanTarifs = modalTarifs.querySelector(".close");
+
+    btnTarifs.onclick = function(event){
+      event.preventDefault();
+      modalTarifs.style.display = "block";
+      modalTarifs.setAttribute('aria-hidden','false');
+    };
+
+    if (spanTarifs) {
+      spanTarifs.onclick = function(){
+        modalTarifs.style.display = "none";
+        modalTarifs.setAttribute('aria-hidden','true');
+      };
+    }
+
+    // fermer en cliquant en dehors du modal
+    window.addEventListener('click', function(event){
+      if (event.target == modalTarifs) {
+        modalTarifs.style.display = "none";
+        modalTarifs.setAttribute('aria-hidden','true');
+      }
+    });
+
+    // fermer avec Échap (accessibilité)
+    window.addEventListener('keydown', function(e){
+      if (e.key === "Escape" && modalTarifs.style.display === "block") {
+        modalTarifs.style.display = "none";
+        modalTarifs.setAttribute('aria-hidden','true');
+      }
+    });
+  }
 });
 </script>
 

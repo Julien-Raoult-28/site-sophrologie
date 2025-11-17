@@ -6,6 +6,19 @@
   --vert: #d6d4c8;
 }
 
+.accueil_video {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.video_cathy {
+  width: 50%;
+  max-width: 200px; /* ajuste selon ton design */
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
 
 .accueil_presentation {
   display: flex;
