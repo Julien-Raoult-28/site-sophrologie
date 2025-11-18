@@ -4,58 +4,180 @@
   --beige_foncé: #a67c52;
   --police_grise: #6d6d6d;
   --vert: #d6d4c8;
+  --text-block-height: 380px;
 }
 
-.accueil_video {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  margin: 20px 0;
-}
 
-.video_cathy {
-  width: 50%;
-  max-width: 200px; /* ajuste selon ton design */
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-}
 
+/* Conteneur principal : les éléments sont alignés verticalement au centre */
 .accueil_presentation {
   display: flex;
-  align-items: center;
+  justify-content: center;
+  align-items: center; /* centre verticalement image / texte / vidéo */
+  padding: 20px;
+  gap: 20px;
+}
+
+/* IMAGE : hauteur contrôlée par la variable, largeur fixe */
+.photo_accueil_1 {
+  flex: 0 0 220px;         /* largeur fixe (220px) mais peut être ajustée */
+  width: 220px;
+  height: var(--text-block-height); /* s'aligne sur la hauteur du bloc texte */
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.10);
+  display: block;
+}
+
+/* Conteneur vidéo : centrer la vidéo à l'intérieur */
+.accueil_video {
+  flex: 2 1 400px; /* grandit si espace disponible, mais la hauteur est contrôlée par la vidéo */
+  display: flex;
+  align-items: center;     /* centre verticalement la vidéo par rapport au conteneur */
+  justify-content: center;
+}
+
+/* VIDÉO : même hauteur que le texte */
+.video_cathy {
+  width: 100%;
+  height: var(--text-block-height); /* s'aligne sur la hauteur du bloc texte */
+  max-width: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  display: block;
+}
+
+/* TEXTE : hauteur réglable via la variable ; contenu centré verticalement */
+.accueil_presentation_texte {
+  background: var(--beige_clair);
+  border-radius: 16px;
+  padding: 20px;                       /* padding interne */
+  flex: 2 1 360px;                     /* laisse le texte grandir en largeur si besoin */
+  height: var(--text-block-height);    /* hauteur contrôlée ici */
+  min-height: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;             /* centre verticalement le contenu texte */
+  gap: 8px;
+  box-sizing: border-box;
+  overflow: hidden;                    /* évite que le texte dépasse visuellement */
+}
+
+/* Texte / typographies */
+.texte1 {
+  font-size: 4em;
+  color: var(--police_grise);
+  margin: 0;
+  font-family: 'Flatlion', sans-serif;
+  line-height: 1;
+}
+
+.texte2 {
+  font-size: 1.2em;
+  font-style: italic;
+  color: var(--beige_foncé);
+  margin: 0;
+  font-family: 'PlayfairDisplay-Italic', sans-serif;
+  font-weight: bold;
+}
+
+.texte3 {
+  font-size: 1em;
+  color: var(--beige_foncé);
+  margin: 0;
+  font-family: 'PlayfairDisplay-Italic', sans-serif;
+}
+
+/* Signature alignée en bas à droite du bloc texte (si nécessaire) */
+.accueil_presentation_signature {
+  font-family: 'Flatlion', sans-serif;
+  font-size: 2.5em; /* réduit pour éviter que la signature force la hauteur */
+  color: var(--beige_foncé);
+  text-align: right;
+  margin: 0;
+  align-self: flex-end;
+}
+
+/* Option utile : si le texte est trop long, on garde la hauteur et on scroll à l'intérieur */
+.accueil_presentation_texte.long-content {
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Petit ajustement esthétique : éviter que images/vidéos dépassent des arrondis sur certains navigateurs */
+.photo_accueil_1,
+.video_cathy {
+  /* crée un nouveau stacking context pour respecter les border-radius */
+  background-clip: padding-box;
+  -webkit-mask-image: -webkit-linear-gradient(white, black);
+}
+
+
+
+
+
+
+/*
+.accueil_presentation {
+  display: flex;
+  align-items: center; /* centre verticalement au lieu d'étirer 
   gap: 40px;
   justify-content: center;
 }
-/*.photo-rond {
-  width: 400px;
-  height: 400px;
-  object-fit: cover;
-  object-position: 30% 30%; 
-  border-radius: 50%;
-  box-shadow: 0 2px 8px var(--beige_foncé);
-  margin-left: 20px;
-}*/
-.photo_accueil_1{
-  /*width: 400px;
-  height: 400px;
-  object-fit: cover;*/
-  margin-left: 20px;
-  margin-top: 20px;
-  height: 600px;
+
+.photo_accueil_1 {
+  flex: 1;
+  max-height: 200px; /* limite la taille de l'image 
+  width: auto; 
+  object-fit: contain; /* conserve le ratio 
+  margin: 20px 0 0 20px;
 }
 
 .accueil_presentation_texte-carre {
   background: var(--beige_clair);
   border-radius: 16px;
-  padding: 30px 40px;
+  padding: 5px 15px;
   min-width: 230px;
   min-height: 180px;
+  flex: 4;
   display: flex;
   flex-direction: column;
   justify-content: center;
   margin-top: 20px;
-  margin-right: 20px;
+  margin-right: 5px;
 }
+
+.texte1 {
+  font-size: 4em;
+  color: var(--police_grise);
+  margin-bottom: 0px;
+  font-family: 'Flatlion';
+}
+.texte2 {
+  font-size: 1.2em;
+  font-style: italic;
+  color: var(--beige_foncé);
+  margin-bottom: 8px;
+  font-family: 'PlayfairDisplay-Italic' , sans-serif;
+  font-weight: bold;
+}
+.texte3  {
+  font-size: 1em;
+  color: var(--beige_foncé);
+  margin-bottom: 0px;
+  font-family: 'PlayfairDisplay-Italic' , sans-serif;
+}
+.accueil_presentation_signature {
+  display: block;
+  /*font-family: 'Great Vibes', cursive;
+  font-family: 'Flatlion' , sans-serif;
+  font-size: 5em;
+  color: var(--beige_foncé); /* ou une autre couleur de ton choix
+  text-align: right;
+  margin-top: 0px;
+  margin-right: 50px;
+}*/
 @font-face {
   font-family: 'Flatlion';
   src: url('Flatlion2.ttf') format('truetype');
@@ -68,35 +190,7 @@
   /*font-weight: normal;
   font-style: normal;*/
 }
-.texte1 {
-  font-size: 6em;
-  color: var(--police_grise);
-  margin-bottom: 10px;
-  font-family: 'Flatlion';
-}
-.texte2 {
-  font-size: 1.2em;
-  font-style: italic;
-  color: var(--beige_foncé);
-  margin-bottom: 16px;
-  font-family: 'PlayfairDisplay-Italic' , sans-serif;
-  font-weight: bold;
-}
-.texte3 p {
-  font-size: 1em;
-  color: var(--beige_foncé);
-  margin-bottom: 10px;
-  font-family: 'PlayfairDisplay-Italic' , sans-serif;
-}
-.accueil_presentation_signature {
-  display: block;
-  /*font-family: 'Great Vibes', cursive;*/
-  font-family: 'Flatlion' , sans-serif;
-  font-size: 5em;
-  color: var(--beige_foncé); /* ou une autre couleur de ton choix */
-  text-align: right;
-  margin-top: 30px;
-}
+
 /* supprimez toute hauteur fixe qui force le conteneur à déformer les images */
 .accueil_2_fond {
   height: auto;    /* laisser le contenu définir la hauteur */
